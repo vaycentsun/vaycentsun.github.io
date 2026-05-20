@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>ROE、PB、PE的利用 | vaycent.com</title>
+  <meta name="description" content="ROE、PB、PE的利用（初步筛选）引言 初步筛选不意味着我们要直接买入，它只是为了筛选出一些可供我们研究的股票，后续工作还有很多。因为一些会计手法或者非经常性损益等原因，PB和PE会被扭曲，被扭曲后的各项指标都可能很”好看”，但这些”好看”不具备可持续性，投资者有必要进一步缩小研究范围。 三次筛选利用ROE+PE+PB进行三次的初步筛选操作  筛选一: TTM $\le$ 12 并且 1 $\l">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ROE、PB、PE的利用">
+<meta property="og:url" content="https://vaycent.com/posts/50378/index.html">
+<meta property="og:site_name" content="🤖Vaycent孙维">
+<meta property="og:description" content="ROE、PB、PE的利用（初步筛选）引言 初步筛选不意味着我们要直接买入，它只是为了筛选出一些可供我们研究的股票，后续工作还有很多。因为一些会计手法或者非经常性损益等原因，PB和PE会被扭曲，被扭曲后的各项指标都可能很”好看”，但这些”好看”不具备可持续性，投资者有必要进一步缩小研究范围。 三次筛选利用ROE+PE+PB进行三次的初步筛选操作  筛选一: TTM $\le$ 12 并且 1 $\l">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2016-03-28T00:00:00.000Z">
+<meta property="article:modified_time" content="2026-03-24T09:59:49.078Z">
+<meta property="article:author" content="🤖Vaycent孙维">
+<meta property="article:tag" content="投资">
+<meta name="twitter:card" content="summary">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://vaycent.com/posts/50378/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="🤖Vaycent孙维" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20210207002337.png" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">🤖Vaycent孙维</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">AI与IT的咨询顾问</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Guangzhou, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+            <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+            <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+            <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+            <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+            <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">友链</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+            <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于我</span>
+          </a>          
+        </li>
+        
+ 
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/vaycent" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://xueqiu.com/vaycent" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://www.behance.net/vaycentsun" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+  
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>我很懒，总是不更新内容</p><p>可通过点击头像加我微信好友哦～</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%95%E8%B5%84/">投资</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A0%94%E5%8F%91%E6%8A%80%E6%9C%AF%E5%AE%9E%E8%B7%B5/">研发技术实践</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a><span class="category-list-count">7</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/BizDevOps/" style="font-size: 13.86px;">BizDevOps</a> <a href="/tags/IT%E7%A0%94%E5%8F%91%E6%8A%80%E6%9C%AF/" style="font-size: 13.43px;">IT研发技术</a> <a href="/tags/Playful%E5%A5%BD%E7%8E%A9/" style="font-size: 13.29px;">Playful好玩</a> <a href="/tags/%E4%B9%90%E9%AB%98%E8%AE%A4%E7%9C%9F%E7%8E%A9/" style="font-size: 13px;">乐高认真玩</a> <a href="/tags/%E5%BC%80%E6%BA%90/" style="font-size: 13.29px;">开源</a> <a href="/tags/%E6%8A%95%E8%B5%84/" style="font-size: 14px;">投资</a> <a href="/tags/%E6%95%8F%E6%8D%B7/" style="font-size: 13.71px;">敏捷</a> <a href="/tags/%E6%95%B0%E5%AD%97%E5%8C%96/" style="font-size: 13.57px;">数字化</a> <a href="/tags/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/" style="font-size: 13.14px;">移动开发</a> <a href="/tags/%E9%A2%86%E5%AF%BC%E5%8A%9B/" style="font-size: 13px;">领导力</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/">2026</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016</a><span class="archive-list-count">17</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/posts/0/" class="title">(no title)</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2026-05-20T06:52:15.179Z" itemprop="datePublished">2026-05-20</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/26240/" class="title">某大型金融科技组织敏捷DevOps转型案例简介</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-03-28T00:00:00.000Z" itemprop="datePublished">2023-03-28</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/10056/" class="title">高效团队-Google亚里士多德计划</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-01-31T00:00:00.000Z" itemprop="datePublished">2023-01-31</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/51086/" class="title">unFIX - 破幻求实的业务敏捷组织结构变革模型</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-09-18T00:00:00.000Z" itemprop="datePublished">2022-09-18</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/2ca8939/" class="title">unFIX模型-Forum(论坛)</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-04-13T00:00:00.000Z" itemprop="datePublished">2022-04-13</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+  <aside class="sidebar sidebar-toc collapse   in  " id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ROE%E3%80%81PB%E3%80%81PE%E7%9A%84%E5%88%A9%E7%94%A8%EF%BC%88%E5%88%9D%E6%AD%A5%E7%AD%9B%E9%80%89%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">ROE、PB、PE的利用（初步筛选）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E6%AC%A1%E7%AD%9B%E9%80%89"><span class="toc-number">1.1.</span> <span class="toc-text">三次筛选</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AD%9B%E9%80%89%E4%B8%80"><span class="toc-number">1.1.1.</span> <span class="toc-text">筛选一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AD%9B%E9%80%89%E4%BA%8C"><span class="toc-number">1.1.2.</span> <span class="toc-text">筛选二</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AD%9B%E9%80%89%E4%B8%89"><span class="toc-number">1.1.3.</span> <span class="toc-text">筛选三</span></a></li></ol></li></ol></li></ol>
+    </nav>
+  </div>
+</aside>
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-invest/20160328ROE_PB_PE利用" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ROE、PB、PE的利用
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/posts/50378/" class="article-date">
+	  <time datetime="2016-03-28T00:00:00.000Z" itemprop="datePublished">2016-03-28</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E6%8A%95%E8%B5%84/">投资</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/%E6%8A%95%E8%B5%84/" rel="tag">投资</a>
+  </span>
+
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/50378/#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h1 id="ROE、PB、PE的利用（初步筛选）"><a href="#ROE、PB、PE的利用（初步筛选）" class="headerlink" title="ROE、PB、PE的利用（初步筛选）"></a>ROE、PB、PE的利用（初步筛选）</h1><p><strong>引言</strong></p>
+<p>初步筛选不意味着我们要直接买入，它只是为了筛选出一些可供我们研究的股票，后续工作还有很多。因为一些会计手法或者非经常性损益等原因，PB和PE会被扭曲，被扭曲后的各项指标都可能很”好看”，但这些”好看”不具备可持续性，投资者有必要进一步缩小研究范围。</p>
+<h2 id="三次筛选"><a href="#三次筛选" class="headerlink" title="三次筛选"></a>三次筛选</h2><p>利用ROE+PE+PB进行三次的初步筛选操作</p>
+<ul>
+<li>筛选一: <strong>TTM $\le$ 12 并且 1 $\le$ PB $\le$ 2</strong></li>
+<li>筛选二: <strong>PE $\le$ 15 并且减去筛选一的组合</strong></li>
+<li>筛选三: <strong>PB $\le$ 1 并且减去筛选一、筛选二的组合</strong></li>
+</ul>
+<p>三次筛选操作的意义</p>
+<ul>
+<li>筛选一: <strong>可能出现稳定价值型、价值成长型，找出估值处于合理或低估的标的，而且以低估为主。</strong></li>
+<li>筛选二: <strong>可能出现部分高速成长型股票、部分困境反转型</strong></li>
+<li>筛选三: <strong>可能出现困境反转型</strong></li>
+</ul>
+<p>每个人对投资的预期回报率不同，风险偏好也不同，因此对估值的容忍程度也不同。投资者可根据自己实际情况，调整以上筛选股票的参数数值。如经三次筛选后，没有股票或者很少量股票出现，说明市场整体估值已经偏高。</p>
+<h3 id="筛选一"><a href="#筛选一" class="headerlink" title="筛选一"></a>筛选一</h3><p>当TTM＝12，PB&#x3D;1时<br>ROE &#x3D; $(1 \div 12) \times 100% \times 调整系数 \approx 8.33% \times 1.09 \approx 9.08%$</p>
+<p>当TTM＝12，PB&#x3D;2时<br>ROE &#x3D; $(2 \div 12) \times 100% \times 调整系数 \approx 16.7% \times 1.20 \approx 20.04%$</p>
+<p>当TTM小于12时<br>ROE公式的分母TTM变小，ROE更大</p>
+<ul>
+<li>所以可得：筛选一的结果是在合理的PB范围内，筛选出ROE $\ge$ 9.08%可能出现的稳定价值型、价值成长型企业。</li>
+</ul>
+<h3 id="筛选二"><a href="#筛选二" class="headerlink" title="筛选二"></a>筛选二</h3><p>用PE小于15得出的结果数量会超过第一次，这时我们重点关注没有在第一次筛选中出现过的标的即可。这次的结果中，可能额外出现的研究标的主要有：</p>
+<ul>
+<li>12 $\le$ PE $\le$ 15的高ROE股票，此类可能出现部分高速成长型为主</li>
+<li>PE $\le$ 15但PB $\le$ 1的低ROE股票，此类可能出现部分困境反转型</li>
+</ul>
+<h3 id="筛选三"><a href="#筛选三" class="headerlink" title="筛选三"></a>筛选三</h3><p>重点关注第一次、第二次未选出的结果</p>
+<ul>
+<li>筛选出PE小于15甚至为负，PB $\le$ 1且ROE很低，可能出现的困境反转型</li>
+</ul>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://vaycent.com/posts/50378/" title="ROE、PB、PE的利用" target="_blank" rel="external">https://vaycent.com/posts/50378/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20210207002337.png" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20210207002337.png" target="_blank"><span class="text-dark">🤖Vaycent孙维</span><small class="ml-1x">AI与IT的咨询顾问</small></a></h3>
+        <div>专注为企业以及个人提供数字化、敏捷DevOps、IT技术研发、需求分析的咨询服务</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/posts/52559/" title="低风险兵器谱"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/posts/62962/" title="ROE的计算：PB、PE的组合"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn " data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">    <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,wechat,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/vaycent" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://xueqiu.com/vaycent" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://www.behance.net/vaycentsun" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        &copy; 2026 🤖Vaycent孙维
+        
+        <div class="publishby">
+		<!-- <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备20008800号</a> -->
+
+        <!--
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        -->
+        
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+
+
+
+
+   
+
+
+
+
+
+    <script defer>
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?77790ea31b04cf9ba059d113a90e3448";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+</body>
+</html>

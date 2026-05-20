@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>高效团队-Google亚里士多德计划 | vaycent.com</title>
+  <meta name="description" content="推荐序​		本文为rework.withgoogle关于Google高效团队成功因素研究的译文。研究人员通过亚里士多德计划开展研究，通过对大量团队效率进行定性（360主观评估）与定量（产出成果度量）结合的统计评估，筛选出左右着团队动态的五个关键支柱：心理安全、可靠性、结构和清晰度、意义、影响力。其中心理安全对团队而言最为重要，这就要求管理者自顶向下地提供充分授权、更多容忍与尝试的组织文化的支持，以">
+<meta property="og:type" content="article">
+<meta property="og:title" content="高效团队-Google亚里士多德计划">
+<meta property="og:url" content="https://vaycent.com/posts/10056/index.html">
+<meta property="og:site_name" content="🤖Vaycent孙维">
+<meta property="og:description" content="推荐序​		本文为rework.withgoogle关于Google高效团队成功因素研究的译文。研究人员通过亚里士多德计划开展研究，通过对大量团队效率进行定性（360主观评估）与定量（产出成果度量）结合的统计评估，筛选出左右着团队动态的五个关键支柱：心理安全、可靠性、结构和清晰度、意义、影响力。其中心理安全对团队而言最为重要，这就要求管理者自顶向下地提供充分授权、更多容忍与尝试的组织文化的支持，以">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/202305111347743.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/202305111348248.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/202305111348498.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/202305111351700.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/202305111356864.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/202305111357795.jpeg">
+<meta property="article:published_time" content="2023-01-31T00:00:00.000Z">
+<meta property="article:modified_time" content="2026-03-24T09:59:49.077Z">
+<meta property="article:author" content="🤖Vaycent孙维">
+<meta property="article:tag" content="BizDevOps">
+<meta property="article:tag" content="敏捷">
+<meta property="article:tag" content="数字化">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/202305111347743.png">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://vaycent.com/posts/10056/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="🤖Vaycent孙维" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20210207002337.png" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">🤖Vaycent孙维</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">AI与IT的咨询顾问</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Guangzhou, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+            <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+            <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+            <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+            <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+            <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">友链</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+            <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于我</span>
+          </a>          
+        </li>
+        
+ 
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/vaycent" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://xueqiu.com/vaycent" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://www.behance.net/vaycentsun" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+  
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>我很懒，总是不更新内容</p><p>可通过点击头像加我微信好友哦～</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%95%E8%B5%84/">投资</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A0%94%E5%8F%91%E6%8A%80%E6%9C%AF%E5%AE%9E%E8%B7%B5/">研发技术实践</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a><span class="category-list-count">7</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/BizDevOps/" style="font-size: 13.86px;">BizDevOps</a> <a href="/tags/IT%E7%A0%94%E5%8F%91%E6%8A%80%E6%9C%AF/" style="font-size: 13.43px;">IT研发技术</a> <a href="/tags/Playful%E5%A5%BD%E7%8E%A9/" style="font-size: 13.29px;">Playful好玩</a> <a href="/tags/%E4%B9%90%E9%AB%98%E8%AE%A4%E7%9C%9F%E7%8E%A9/" style="font-size: 13px;">乐高认真玩</a> <a href="/tags/%E5%BC%80%E6%BA%90/" style="font-size: 13.29px;">开源</a> <a href="/tags/%E6%8A%95%E8%B5%84/" style="font-size: 14px;">投资</a> <a href="/tags/%E6%95%8F%E6%8D%B7/" style="font-size: 13.71px;">敏捷</a> <a href="/tags/%E6%95%B0%E5%AD%97%E5%8C%96/" style="font-size: 13.57px;">数字化</a> <a href="/tags/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/" style="font-size: 13.14px;">移动开发</a> <a href="/tags/%E9%A2%86%E5%AF%BC%E5%8A%9B/" style="font-size: 13px;">领导力</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/">2026</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016</a><span class="archive-list-count">17</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/posts/0/" class="title">(no title)</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2026-05-20T06:52:15.179Z" itemprop="datePublished">2026-05-20</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/26240/" class="title">某大型金融科技组织敏捷DevOps转型案例简介</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-03-28T00:00:00.000Z" itemprop="datePublished">2023-03-28</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/10056/" class="title">高效团队-Google亚里士多德计划</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-01-31T00:00:00.000Z" itemprop="datePublished">2023-01-31</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/51086/" class="title">unFIX - 破幻求实的业务敏捷组织结构变革模型</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-09-18T00:00:00.000Z" itemprop="datePublished">2022-09-18</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/2ca8939/" class="title">unFIX模型-Forum(论坛)</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-04-13T00:00:00.000Z" itemprop="datePublished">2022-04-13</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+  <aside class="sidebar sidebar-toc collapse   in  " id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A8%E8%8D%90%E5%BA%8F"><span class="toc-number">1.</span> <span class="toc-text">推荐序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E4%BB%80%E4%B9%88%E6%98%AF%E9%AB%98%E6%95%88"><span class="toc-number">3.</span> <span class="toc-text">定义什么是高效</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%B6%E9%9B%86%E6%95%B0%E6%8D%AE%E5%B9%B6%E5%BA%A6%E9%87%8F%E6%95%88%E7%8E%87"><span class="toc-number">4.</span> <span class="toc-text">收集数据并度量效率</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AE%E5%AE%9A%E9%AB%98%E6%95%88%E5%9B%A2%E9%98%9F%E7%9A%84%E5%8A%A8%E6%80%81"><span class="toc-number">5.</span> <span class="toc-text">确定高效团队的动态</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BF%83%E7%90%86%E5%AE%89%E5%85%A8"><span class="toc-number">5.1.</span> <span class="toc-text">心理安全</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E9%9D%A0%E6%80%A7"><span class="toc-number">5.2.</span> <span class="toc-text">可靠性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%84%E5%92%8C%E6%B8%85%E6%99%B0%E5%BA%A6"><span class="toc-number">5.3.</span> <span class="toc-text">结构和清晰度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%84%8F%E4%B9%89"><span class="toc-number">5.4.</span> <span class="toc-text">意义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%B1%E5%93%8D%E5%8A%9B"><span class="toc-number">5.5.</span> <span class="toc-text">影响力</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%EF%BC%9A%E5%B8%AE%E5%8A%A9%E5%9B%A2%E9%98%9F%E7%A1%AE%E5%AE%9A%E8%87%AA%E5%B7%B1%E7%9A%84%E9%9C%80%E8%A6%81"><span class="toc-number">6.</span> <span class="toc-text">方法：帮助团队确定自己的需要</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%EF%BC%9A%E5%BB%BA%E7%AB%8B%E5%BF%83%E7%90%86%E5%AE%89%E5%85%A8%E6%84%9F"><span class="toc-number">7.</span> <span class="toc-text">方法：建立心理安全感</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BF%83%E7%90%86%E5%AE%89%E5%85%A8%E6%83%85%E6%99%AF%E3%80%81%E6%83%B3%E6%B3%95%E4%B8%8E%E5%88%9B%E6%96%B0"><span class="toc-number">7.1.</span> <span class="toc-text">心理安全情景、想法与创新</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%AE%E5%8A%A9%E5%9B%A2%E9%98%9F%E9%87%87%E5%8F%96%E8%A1%8C%E5%8A%A8"><span class="toc-number">8.</span> <span class="toc-text">帮助团队采取行动</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BF%83%E7%90%86%E5%AE%89%E5%85%A8-1"><span class="toc-number">8.1.</span> <span class="toc-text">心理安全</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E9%9D%A0%E6%80%A7-1"><span class="toc-number">8.2.</span> <span class="toc-text">可靠性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%84%E5%92%8C%E6%B8%85%E6%99%B0%E5%BA%A6-1"><span class="toc-number">8.3.</span> <span class="toc-text">结构和清晰度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%84%8F%E4%B9%89-1"><span class="toc-number">8.4.</span> <span class="toc-text">意义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%B1%E5%93%8D%E5%8A%9B-1"><span class="toc-number">8.5.</span> <span class="toc-text">影响力</span></a></li></ol></li></ol>
+    </nav>
+  </div>
+</aside>
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-20230131高效团队-Google亚里士多德计划" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      高效团队-Google亚里士多德计划
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/posts/10056/" class="article-date">
+	  <time datetime="2023-01-31T00:00:00.000Z" itemprop="datePublished">2023-01-31</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/BizDevOps/" rel="tag">BizDevOps</a>, <a class="article-tag-link-link" href="/tags/%E6%95%8F%E6%8D%B7/" rel="tag">敏捷</a>, <a class="article-tag-link-link" href="/tags/%E6%95%B0%E5%AD%97%E5%8C%96/" rel="tag">数字化</a>
+  </span>
+
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/10056/#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h2 id="推荐序"><a href="#推荐序" class="headerlink" title="推荐序"></a>推荐序</h2><p>​		本文为rework.withgoogle关于Google高效团队成功因素研究的译文。研究人员通过亚里士多德计划开展研究，通过对大量团队效率进行定性（360主观评估）与定量（产出成果度量）结合的统计评估，筛选出左右着团队动态的五个关键支柱：心理安全、可靠性、结构和清晰度、意义、影响力。其中心理安全对团队而言最为重要，这就要求管理者自顶向下地提供充分授权、更多容忍与尝试的组织文化的支持，以激发团队的自组织与创新能力。在协助团队清晰自身需要的前提下，更要躬身入局帮助团队采取具体行动，付诸实践才能切实发生改变，让高效团队自下而上地形成。</p>
+<p><em>———Vaycent孙维，UPerform优普丰敏捷教练</em></p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>​		在 Google 和许多组织当中的绝大多数工作，都是由团队共同协作完成的。团队是实际发生生产的单元分子，是构思和验证创新理念的地方，也是员工工作体验大的所在。但团队这个地方同样产生着各种人际关系问题，不适宜的团队技能组合、不明确的团队目标，这些都会阻碍生产并引发矛盾摩擦。</p>
+<p>​		在Google 的Oxygen 研究项目取得成功之后，人力分析团队对其研究了如何造就卓越的管理，Google 研究人员也采用了类似的方法来发掘成为 Google 高效团队的秘密。代号为“亚里士多德计划”——这是对亚里士多德名言的致敬，“整体大于部分之和”（正如谷歌研究人员所认为的那样，员工们可以一起更好地工作而非单独进行工作）——其最终目的都是回答以下该问题：“是什么让 Google 的团队变得高效？”<img src="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/202305111347743.png" alt="图片"></p>
+<p>​		在回答“什么是高效团队？”这个问题之前。我们首先要回答“什么是团队？” 这可不是一个存在主义的思考练习，实际上弄清楚所有一起工作的个体之间的人员资格、相互关系、职责与责任是困难的，但这些对于提高团队效率而言至关重要。团队一词可具有十分广泛的含义。现存也有许多的定义和框架，具体取决于任务的相互依赖性、组织的状态和团队的任期。因此，在最基本的层面上，研究人员试图将“工作组”与“团队”的概念区分开来：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/202305111348248.png" alt="图片"></p>
+<p>​		组织结构图只能说明部分真实情况，因此 Google 研究团队专注于研究那些具备真正相互依赖的工作关系，在内部能够自行进行决策的团队。在亚里士多德计划中，研究对象的团队规模从 3 到 50 人不等（中位数为 9 人）。</p>
+<h2 id="定义什么是高效"><a href="#定义什么是高效" class="headerlink" title="定义什么是高效"></a>定义什么是高效</h2><p>​		一旦他们了解了Google团队的组成，研究人员就必须确定如何衡量效率。他们查看编写的代码行、修复的错缺陷、客户的满意度等。但Google的领导者们，在推动这些客观效率评估之初，就意识到每项监测指标都可能存在内在的缺陷，比如说更多的代码行不一定是好事，更多的缺陷修复也意味着原来产生更多着的缺陷。</p>
+<p>​		取而代之的是，让团队自行选择定性评估和定量评估相结合使用。对于定性的评估，研究人员从高管、团队领导和团队成员三个不同的角度来收集输入。虽然他们都被要求以相似的纬度对团队进行评分，但当被要求解释他们各自的评分时，他们各自的回答表明了，对于评估团队效率这个事情，每个人都专注在不同的角度。</p>
+<p>​		高管们最为关心的是结果（例如，销售数字或产品发布），然而团队成员却表示，团队文化是衡量团队效率最为重要的指标。无独有偶，团队领导对效率概念的理解同时包括对整体与个体的担忧，他们认为自主权、愿景和目标是最为重要的衡量标准。</p>
+<p>因此，研究人员以四种不同的方式衡量团队效率：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/202305111348498.png" alt="图片"></p>
+<p>​		定性的评估有助于发现团队的结果和文化之间的关联，但其存在一定的主观性。另一方面，定量指标评估则提供了具体的团队度量，但其缺乏现实情境的考虑。因此，这四项措施的结合，使得研究人员能够深入了解团队以及全面地定义团队效率。</p>
+<h2 id="收集数据并度量效率"><a href="#收集数据并度量效率" class="headerlink" title="收集数据并度量效率"></a>收集数据并度量效率</h2><p>​		根据全球高管的调查意见，研究团队确定了 180 个团队进行研究（115 个工程项目团队和 65 个销售团队），其中包括高绩效和低绩效团队。该研究对团队的组成（如人员的性格特征、销售技巧、人员规模统计数据）与团队的动态（如与队友共同工作的感觉等）进行了测试，测试他们都是如何影响着团队的效率。该想法来自现有的研究以及Google自身对“什么是高效的团队” 的经验。</p>
+<p>​		他们对领导者们进行了数百次的双盲访谈，以了解他们认为推动团队效率的因素。然后，研究人员查看了现有的调查数据，包括来自年度员工敬业调查和 gDNA（谷歌关于工作和生活的纵向研究）等的250多个条目，以了解哪些变量可能与团队效率相关。</p>
+<p>以下是研究中使用的部分样本条目，参与者被要求回答同意或不同意选项：</p>
+<ul>
+<li><p>团队动态：我觉得向团队表达出不同意见是安全的。</p>
+</li>
+<li><p>技能组合：我擅长于驾驭障碍和解决障碍。</p>
+</li>
+<li><p>人格特质：我认为自己是一名可靠的工作伙伴（通过大五人格评估）。</p>
+</li>
+<li><p>情商：我对别人的问题不感兴趣（由Toronto共情评估问卷收集）。</p>
+</li>
+</ul>
+<p>同时还收集了诸如任期、级别和地区等人员统计变量。</p>
+<h2 id="确定高效团队的动态"><a href="#确定高效团队的动态" class="headerlink" title="确定高效团队的动态"></a>确定高效团队的动态</h2><p>​		使用所有这些数据，通过团队运作统计模型以收集了解的众多输入变量中的哪些实际影响着团队的效率。他们对数百个变量使用了超过 35 种不同的统计模型，试图确定以下因素：</p>
+<ul>
+<li><p>影响着多个定性和定量的结果指标</p>
+</li>
+<li><p>适用于组织中不同类型的团队</p>
+</li>
+<li><p>找出一致的、稳定的统计意义</p>
+</li>
+</ul>
+<p>研究人员发现，真正重要的不是团队成员个体，而是团队如何共同工作的。以下按重要性排序：</p>
+<h3 id="心理安全"><a href="#心理安全" class="headerlink" title="心理安全"></a>心理安全</h3><p>​		心理安全是指个人对承担人际风险的后果的认知，或个人认为在团队内被视为无知、无能、消极或破坏的情况下，自我可以安全承担风险的信念。在一个心理安全性高的团队中，队友们在团队成员附近进行冒险性尝试时会感到安全。他们相信团队中没有人会因为承认错误、提出问题或提出新想法而让其他人感到难堪或惩罚。</p>
+<h3 id="可靠性"><a href="#可靠性" class="headerlink" title="可靠性"></a>可靠性</h3><p>​		在可靠的团队中，成员能够可靠地按时完成高质量的工作（而不是推卸责任）。</p>
+<h3 id="结构和清晰度"><a href="#结构和清晰度" class="headerlink" title="结构和清晰度"></a>结构和清晰度</h3><p>​		个体对工作期望的理解、个体明白如何平衡实现这些工作期望的过程以及个人绩效表现，这对团队效率而言非常重要。目标即可以在个体层面，也可以团队层面设定，并且必须是具体的、具有挑战性的和可实现的。Google 经常使用目标和关键结果 (OKR)来帮助设定和传达长短期目标。</p>
+<h3 id="意义"><a href="#意义" class="headerlink" title="意义"></a>意义</h3><p>​		在工作或输出当中找到目标感，对于团队效率很重要。但工作的意义对每个个体可能大相径庭：例如，财务安全、支持家庭、帮助团队成功，又或者是个体的自我表达。</p>
+<h3 id="影响力"><a href="#影响力" class="headerlink" title="影响力"></a>影响力</h3><p>​		个人的工作结果，即我们对工作产生的影响的主观判断，这对团队很重要。看到个人的工作成果正在帮助到实现组织的目标，可以揭示出个人的影响。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/202305111351700.png" alt="图片"></p>
+<p>研究人员同时地发现了哪些变量与 Google 的团队效率之间是没有明显关联的：</p>
+<p>1.团队成员集中办公（让大家处于同一办公地点）</p>
+<p>2.共识驱动的决策</p>
+<p>3.团队成员的性格外向程度</p>
+<p>4.团队成员的个人表现</p>
+<p>5.工作负载的大小</p>
+<p>6.工作资历</p>
+<p>7.团队规模</p>
+<p>8.任期</p>
+<p>​		需要注意的是，虽然这些变量并没有明显影响 Google 的团队效率上的测量，但这并不意味着它们在其他地方不重要。例如，虽然团队规模该变量并未在本次 Google 分析中出现关联性，但有大量市场研究表明它的重要性。</p>
+<p>​		许多研究人员已经可以确定更小的团队规模（包含少于 10 名成员），对比较大的团队规模更有利于团队的成功（Katzenbach &amp; Smith, 1993 ; Moreland, Levine, &amp; Wingert, 1996。较小的团队也能体验到更好的工作和生活质量（Campion等人，1993 年），工作成果（奥布等人，2011 年），更少的冲突，更强的沟通，更多的凝聚力（Moreland &amp; Levine，1992 年）; Mathieu 等人，2008 年），以及更多的组织内部的公民行为（Pearce 和 Herbik，2004 年）。</p>
+<h2 id="方法：帮助团队确定自己的需要"><a href="#方法：帮助团队确定自己的需要" class="headerlink" title="方法：帮助团队确定自己的需要"></a>方法：帮助团队确定自己的需要</h2><p>​		在交流研究结果以外，Google 研究团队还希望让 Google 员工能够理解自己团队的动态并提供改进建议。因此，他们创建了一项调查，以供团队之间进行讨论。调查条目侧重于五个高效团队的支柱以及问题，它们包括：</p>
+<ul>
+<li><p>心理安全——“如果我在我们的团队中犯了错误，并不会对我不利。”</p>
+</li>
+<li><p>可靠性——“当我的队友说他们计划做某事时，他们会坚持地执行。”</p>
+</li>
+<li><p>结构和清晰——“我们的团队有一个高效的决策过程。”</p>
+</li>
+<li><p>意义——“我为我们的团队所做的工作对我来说很有意义。”</p>
+</li>
+<li><p>影响力 - “我理解我们团队的工作是如何为组织的目标做出贡献的。”</p>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/202305111356864.png" alt="640 (5)"></p>
+<p>​		在完成调查后，团队负责人会收到匿名的汇总分数，以便与团队成员分享信息以讨论使用。负责赋能促进的成员通常也会加入讨论，或者由团队负责人在依照赋能促进团队的指引下展开讨论。</p>
+<h2 id="方法：建立心理安全感"><a href="#方法：建立心理安全感" class="headerlink" title="方法：建立心理安全感"></a>方法：建立心理安全感</h2><p>​		在研究人员确定的高效团队的五个关键动力中，心理安全是迄今为止最为重要的。Google研究人员发现，在心理安全感较高的团队中，个人离开Google的可能性较小，他们更善于融合团队队友们的不同想法，为团队带来更多的营收，高管们往往对他们的评价是，能达到两倍的团队效率。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/202305111357795.jpeg" alt="图片"></p>
+<p>​		哈佛大学的组织行为科学家Amy Edmondson最先引入了“团队心理安全”的概念，并将其定义为“团队成员共同持有的一种信念，即团队在人际关系中承担风险是安全的”。让团队成员承担风险听起来很简单。但是我们问自己一个基础的问题，比如“这个项目的目标是什么？” 可能就会让我们觉得承担风险的行动并不在原来的计划路线当中。在没有得到外部支持与澄清的情况下，当然继续沿袭原有旧路线可能会更轻松容易，也能避免被别人认为我们是无知的。</p>
+<p>为了衡量团队的心理安全水平，Edmondson设计了并询问团队成员们在以下问题，让大家回答是&#x2F;否：</p>
+<p>1.如果你在该团队中犯错误，这通常会对你不利。</p>
+<p>2.该团队的成员能够提出棘手的问题。</p>
+<p>3.该团队的成员有时会因为与众不同而拒绝他人。</p>
+<p>4.在这个团队中承担风险是安全的。</p>
+<p>5.很难向该团队的其他成员寻求帮助。</p>
+<p>6.该团队中不会有人故意破坏我正努力的工作与行事。</p>
+<p>7.与该团队共同工作，我的独特技能和潜能是得到重视和利用的。<br>在她的 TEDx 演讲中，Edmondson提出了个人可以做的三件简单的事情来促进团队的心理安全：</p>
+<p><strong>1.把工作视为是学习问题，而不是执行问题。</strong></p>
+<p><strong>2.承担我们自己的错误。</strong></p>
+<p><strong>3.塑造并带有好奇心地提出各种问题。</strong></p>
+<p>​		在Google内部推广我们的研究成果时与很多团队共同举办过工作坊。在工作坊当中，使用匿名场景模拟来体验各种行为是如何支持以及危害到心理安全的。场景模拟采用角色扮演，然后由小组内进行回顾。以下是某个示例场景：</p>
+<h3 id="心理安全情景、想法与创新"><a href="#心理安全情景、想法与创新" class="headerlink" title="心理安全情景、想法与创新"></a>心理安全情景、想法与创新</h3><p>​		Uli是一位长期任职的经理，并以其技术专长而著名。在过去两年中，他一直在XYZ团队担任经理，该团队负责运行一个大规模项目。他始终坚持非常高的标准，但最近几个月里，Uli越发变得不能容忍错误、低于他标准的想法、以及与他有别的思考方式。</p>
+<p>​		最近，Uli更是公开批评了一位经验丰富的团队成员提出的创新想法，并在背地里更公开地表达了对此成员的负面评价。事实上其他人却认为该名成员的想法正确，研究思考充分，值得进行探索。于是自此以后，团队就不再提出创新的想法，大家缄默不语。</p>
+<p>​		后来Uli按照自己的想法去推动项目的提案，最终却被高管们拒绝了，原因是认为它的方案缺乏创造力和创新。</p>
+<p>作为管理者，在场景模拟回顾时可参考以下问题建议：</p>
+<ul>
+<li><p>你认为案例中哪些行为反映着心理安全？</p>
+</li>
+<li><p>哪些行为可能表明了该场景当中缺乏心理安全？</p>
+</li>
+<li><p>为什么心理安全如此重要？它是如何影响着团队的？这对你的团队有什么启发？</p>
+</li>
+</ul>
+<h2 id="帮助团队采取行动"><a href="#帮助团队采取行动" class="headerlink" title="帮助团队采取行动"></a>帮助团队采取行动</h2><p>​		Google研究人员确定的高效团队的五个关键动力，是基于广泛的团队绩效研究领域的。无论是在 Google 编码开发、即兴头脑风暴写作、火星之旅活动，还是在曲棍球场滑冰-这对团队的工作经验与成果输出都是有必然的关联的。</p>
+<p>​		在Google，既然亚里士多德项目团队已经确定了Google高效团队的构成要素，那么下一步他们就会进行研究，如何创建、培养和授权高效的团队。</p>
+<p>​		可能在你的组织中让团队变得高效的因素会与Google研究人员发现的不同，但无论是什么因素，请考虑参照以下步骤来帮助你：</p>
+<p><strong>1.建立共同的术语词汇——定义出你希望在组织中的团队培养出的行为和规范。</strong></p>
+<p><strong>2.创建一个讨论团队动态的论坛——允许团队以安全、建设性的方式来讨论敏感的问题。HRBP或训练有素的赋能促进成员可能对此会有所帮助。</strong></p>
+<p><strong>3.让领导者持续改进——让领导层参与模型机制建立并尽量保持持续改进，帮助将规范付诸行动实践。</strong></p>
+<p>​		以下是在本次Google的高效团队研究当中，收集到的某些经理和领导者给出的信息提示，这都是基于外部研究和 Google 自身的经验：</p>
+<h3 id="心理安全-1"><a href="#心理安全-1" class="headerlink" title="心理安全"></a>心理安全</h3><ul>
+<li><p>征求团队的意见。</p>
+</li>
+<li><p>分享有关个人和工作风格偏好的信息，并鼓励其他人也这样做。</p>
+</li>
+<li><p>观看Amy Edmondson 关于心理安全的 TED 演讲。</p>
+</li>
+</ul>
+<h3 id="可靠性-1"><a href="#可靠性-1" class="headerlink" title="可靠性"></a>可靠性</h3><ul>
+<li><p>为团队创建清晰的角色和职责。</p>
+</li>
+<li><p>制定具体的项目计划，为每个人的工作提供透明度。</p>
+</li>
+<li><p>讨论一些关于尽职的研究。</p>
+</li>
+</ul>
+<h3 id="结构和清晰度-1"><a href="#结构和清晰度-1" class="headerlink" title="结构和清晰度"></a>结构和清晰度</h3><ul>
+<li><p>定期沟通团队目标，并确保团队成员理解实现目标的计划。</p>
+</li>
+<li><p>确保你的团队会议有明确的议程和指定的引导者。</p>
+</li>
+<li><p>考虑采用目标和关键结果 (OKR)来组织团队的工作。</p>
+</li>
+</ul>
+<h3 id="意义-1"><a href="#意义-1" class="headerlink" title="意义"></a>意义</h3><ul>
+<li><p>对于团队工作出色的表现给予积极的正面反馈，并提供帮助以解决他们遇到的问题。</p>
+</li>
+<li><p>对帮助过你的人公开表达感激。</p>
+</li>
+<li><p>有目的地阅读毕马威案例研究。</p>
+</li>
+</ul>
+<h3 id="影响力-1"><a href="#影响力-1" class="headerlink" title="影响力"></a>影响力</h3><ul>
+<li><p>共创清晰的愿景，以加强展示出每个团队成员的工作是如何直接支持组织的目标并做出贡献的。</p>
+</li>
+<li><p>反思你正在做的工作，思考它是如何影响我们的用户、客户和组织的。</p>
+</li>
+<li><p>专注用户价值，并采用以用户为中心的评价方式</p>
+</li>
+</ul>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://vaycent.com/posts/10056/" title="高效团队-Google亚里士多德计划" target="_blank" rel="external">https://vaycent.com/posts/10056/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20210207002337.png" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20210207002337.png" target="_blank"><span class="text-dark">🤖Vaycent孙维</span><small class="ml-1x">AI与IT的咨询顾问</small></a></h3>
+        <div>专注为企业以及个人提供数字化、敏捷DevOps、IT技术研发、需求分析的咨询服务</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/posts/26240/" title="某大型金融科技组织敏捷DevOps转型案例简介"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/posts/51086/" title="unFIX - 破幻求实的业务敏捷组织结构变革模型"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn " data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">    <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,wechat,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/vaycent" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://xueqiu.com/vaycent" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://www.behance.net/vaycentsun" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        &copy; 2026 🤖Vaycent孙维
+        
+        <div class="publishby">
+		<!-- <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备20008800号</a> -->
+
+        <!--
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        -->
+        
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+
+
+
+
+   
+
+
+
+
+
+    <script defer>
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?77790ea31b04cf9ba059d113a90e3448";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+</body>
+</html>

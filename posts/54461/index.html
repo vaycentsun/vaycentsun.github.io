@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>价值回归测算表 | vaycent.com</title>
+  <meta name="description" content="价值回归试算表引言价值回归试算表不是什么新的估值方法，它只是众多估值方法的一个补充。它不是用于测量这个股票高估还是低估了，而且帮助投资者估计股票的期限，估算实现预期收益的的情形，用以指导个人进行资产负债的期限配对。价值回归试算表更适用于稳定价值型、价值成长型、高速成长型的股票。  估值锚估值锚：参考的一个市盈率，投资者可以根据自己的风险偏好设定。例如：参考数只二至三年期限的高息债券利率、整体市场长">
+<meta property="og:type" content="article">
+<meta property="og:title" content="价值回归测算表">
+<meta property="og:url" content="https://vaycent.com/posts/54461/index.html">
+<meta property="og:site_name" content="🤖Vaycent孙维">
+<meta property="og:description" content="价值回归试算表引言价值回归试算表不是什么新的估值方法，它只是众多估值方法的一个补充。它不是用于测量这个股票高估还是低估了，而且帮助投资者估计股票的期限，估算实现预期收益的的情形，用以指导个人进行资产负债的期限配对。价值回归试算表更适用于稳定价值型、价值成长型、高速成长型的股票。  估值锚估值锚：参考的一个市盈率，投资者可以根据自己的风险偏好设定。例如：参考数只二至三年期限的高息债券利率、整体市场长">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2016-01-25T00:00:00.000Z">
+<meta property="article:modified_time" content="2026-03-24T09:59:49.078Z">
+<meta property="article:author" content="🤖Vaycent孙维">
+<meta property="article:tag" content="投资">
+<meta name="twitter:card" content="summary">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://vaycent.com/posts/54461/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="🤖Vaycent孙维" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20210207002337.png" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">🤖Vaycent孙维</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">AI与IT的咨询顾问</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Guangzhou, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+            <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+            <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+            <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+            <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+            <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">友链</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+            <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于我</span>
+          </a>          
+        </li>
+        
+ 
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/vaycent" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://xueqiu.com/vaycent" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://www.behance.net/vaycentsun" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+  
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>我很懒，总是不更新内容</p><p>可通过点击头像加我微信好友哦～</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%95%E8%B5%84/">投资</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A0%94%E5%8F%91%E6%8A%80%E6%9C%AF%E5%AE%9E%E8%B7%B5/">研发技术实践</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a><span class="category-list-count">7</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/BizDevOps/" style="font-size: 13.86px;">BizDevOps</a> <a href="/tags/IT%E7%A0%94%E5%8F%91%E6%8A%80%E6%9C%AF/" style="font-size: 13.43px;">IT研发技术</a> <a href="/tags/Playful%E5%A5%BD%E7%8E%A9/" style="font-size: 13.29px;">Playful好玩</a> <a href="/tags/%E4%B9%90%E9%AB%98%E8%AE%A4%E7%9C%9F%E7%8E%A9/" style="font-size: 13px;">乐高认真玩</a> <a href="/tags/%E5%BC%80%E6%BA%90/" style="font-size: 13.29px;">开源</a> <a href="/tags/%E6%8A%95%E8%B5%84/" style="font-size: 14px;">投资</a> <a href="/tags/%E6%95%8F%E6%8D%B7/" style="font-size: 13.71px;">敏捷</a> <a href="/tags/%E6%95%B0%E5%AD%97%E5%8C%96/" style="font-size: 13.57px;">数字化</a> <a href="/tags/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/" style="font-size: 13.14px;">移动开发</a> <a href="/tags/%E9%A2%86%E5%AF%BC%E5%8A%9B/" style="font-size: 13px;">领导力</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/">2026</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016</a><span class="archive-list-count">17</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/posts/0/" class="title">(no title)</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2026-05-20T06:52:15.179Z" itemprop="datePublished">2026-05-20</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/26240/" class="title">某大型金融科技组织敏捷DevOps转型案例简介</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-03-28T00:00:00.000Z" itemprop="datePublished">2023-03-28</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/10056/" class="title">高效团队-Google亚里士多德计划</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-01-31T00:00:00.000Z" itemprop="datePublished">2023-01-31</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/51086/" class="title">unFIX - 破幻求实的业务敏捷组织结构变革模型</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-09-18T00:00:00.000Z" itemprop="datePublished">2022-09-18</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/2ca8939/" class="title">unFIX模型-Forum(论坛)</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-04-13T00:00:00.000Z" itemprop="datePublished">2022-04-13</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+  <aside class="sidebar sidebar-toc collapse   in  " id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%B7%E5%80%BC%E5%9B%9E%E5%BD%92%E8%AF%95%E7%AE%97%E8%A1%A8"><span class="toc-number">1.</span> <span class="toc-text">价值回归试算表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%B0%E5%80%BC%E9%94%9A"><span class="toc-number">1.0.1.</span> <span class="toc-text">估值锚</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%95%E7%AE%97%E8%A1%A8%E4%BE%8B%E5%AD%90"><span class="toc-number">1.0.2.</span> <span class="toc-text">试算表例子</span></a></li></ol></li></ol></li></ol>
+    </nav>
+  </div>
+</aside>
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-invest/20160125价值回归测算表" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      价值回归测算表
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/posts/54461/" class="article-date">
+	  <time datetime="2016-01-25T00:00:00.000Z" itemprop="datePublished">2016-01-25</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E6%8A%95%E8%B5%84/">投资</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/%E6%8A%95%E8%B5%84/" rel="tag">投资</a>
+  </span>
+
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/54461/#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h1 id="价值回归试算表"><a href="#价值回归试算表" class="headerlink" title="价值回归试算表"></a>价值回归试算表</h1><p><strong>引言</strong><br>价值回归试算表不是什么新的估值方法，它只是众多估值方法的一个补充。它不是用于测量这个股票高估还是低估了，而且帮助投资者估计股票的期限，估算实现预期收益的的情形，用以指导个人进行资产负债的期限配对。价值回归试算表更适用于稳定价值型、价值成长型、高速成长型的股票。</p>
+<hr>
+<h3 id="估值锚"><a href="#估值锚" class="headerlink" title="估值锚"></a>估值锚</h3><p>估值锚：参考的一个市盈率，投资者可以根据自己的风险偏好设定。<br>例如：参考数只二至三年期限的高息债券利率、整体市场长期平均ROE的倒数、等（一般9PE至13PE）</p>
+<hr>
+<h3 id="试算表例子"><a href="#试算表例子" class="headerlink" title="试算表例子"></a>试算表例子</h3><p>估值锚为10PE，投资预期收益率为26%，预估未来上市公司的盈利平均增长率为20%，预估年限为5年</p>
+<table>
+<thead>
+<tr>
+<th>买入参考值</th>
+<th>估值锚（今年）</th>
+<th>1年回锚</th>
+<th>2年回锚</th>
+<th>3年回锚</th>
+<th>4年回锚</th>
+<th>5年回锚</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>7.84</strong></td>
+<td>10.00</td>
+<td>12.00</td>
+<td>14.40</td>
+<td>17.28</td>
+<td>20.74</td>
+<td>24.88</td>
+</tr>
+</tbody></table>
+<p><strong>买入参考值计算</strong>：<br>$$<br>\text{买入参考值} &#x3D; \text{估值锚} \times \frac{(1 + \text{预估盈利增长率})^5}{(1 + \text{预期投资回报率})^5}<br>$$<br>$$<br>\text{买入参考值} &#x3D; 10 \times \frac{(1 + 20%)^5}{(1 + 26%)^5} &#x3D; 10 \times 0.7835 &#x3D; 7.84<br>$$</p>
+<ul>
+<li><strong>那么根据7.84PE买入这家企业，可实现5年后达到26%的预期年收益。</strong></li>
+<li><strong>试算表中后段5个年份的数值为：若当前以此PE买入，需要多长时间回到估值锚位置。</strong></li>
+<li><strong>预期收益越低，股票盈利增长率越高，对买入参考值的可接受程度也越高。</strong></li>
+</ul>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://vaycent.com/posts/54461/" title="价值回归测算表" target="_blank" rel="external">https://vaycent.com/posts/54461/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20210207002337.png" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20210207002337.png" target="_blank"><span class="text-dark">🤖Vaycent孙维</span><small class="ml-1x">AI与IT的咨询顾问</small></a></h3>
+        <div>专注为企业以及个人提供数字化、敏捷DevOps、IT技术研发、需求分析的咨询服务</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/posts/43294/" title="个人资产与负债"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/posts/47381/" title="留存利润与分红"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn " data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">    <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,wechat,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/vaycent" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://xueqiu.com/vaycent" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://www.behance.net/vaycentsun" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        &copy; 2026 🤖Vaycent孙维
+        
+        <div class="publishby">
+		<!-- <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备20008800号</a> -->
+
+        <!--
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        -->
+        
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+
+
+
+
+   
+
+
+
+
+
+    <script defer>
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?77790ea31b04cf9ba059d113a90e3448";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+</body>
+</html>

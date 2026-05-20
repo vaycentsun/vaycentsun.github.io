@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>vaycent.com</title>
+  <meta name="description" content="我开源了 Smart Router：一个让 AI 模型选择变得「无感」的智能路由网关 GitHub: vaycentsun&#x2F;smartRouterPyPI: pip install smartRouterHomebrew: brew install vaycentsun&#x2F;smart-router&#x2F;smart-routerDocker: docker pull vaycentsun&#x2F;sma">
+<meta property="og:type" content="article">
+<meta property="og:title" content="🤖Vaycent孙维">
+<meta property="og:url" content="https://vaycent.com/posts/0/index.html">
+<meta property="og:site_name" content="🤖Vaycent孙维">
+<meta property="og:description" content="我开源了 Smart Router：一个让 AI 模型选择变得「无感」的智能路由网关 GitHub: vaycentsun&#x2F;smartRouterPyPI: pip install smartRouterHomebrew: brew install vaycentsun&#x2F;smart-router&#x2F;smart-routerDocker: docker pull vaycentsun&#x2F;sma">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://vaycent.com/docs/assets/screenshots/dashboard.png">
+<meta property="article:published_time" content="2026-05-20T06:52:15.179Z">
+<meta property="article:modified_time" content="2026-05-20T06:56:42.707Z">
+<meta property="article:author" content="🤖Vaycent孙维">
+<meta property="article:tag" content="AI, IT, 研发效能, 敏捷, DevOps, 产品研发, 业务敏捷, 项目管理, 创新, 科技, 产品, 研发, 需求, 开发, 测试, 软件开发, 好玩">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://vaycent.com/docs/assets/screenshots/dashboard.png">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://vaycent.com/posts/0/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="🤖Vaycent孙维" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20210207002337.png" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">🤖Vaycent孙维</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">AI与IT的咨询顾问</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Guangzhou, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+            <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+            <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+            <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+            <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+            <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">友链</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+            <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于我</span>
+          </a>          
+        </li>
+        
+ 
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/vaycent" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://xueqiu.com/vaycent" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://www.behance.net/vaycentsun" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+  
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>我很懒，总是不更新内容</p><p>可通过点击头像加我微信好友哦～</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%95%E8%B5%84/">投资</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A0%94%E5%8F%91%E6%8A%80%E6%9C%AF%E5%AE%9E%E8%B7%B5/">研发技术实践</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a><span class="category-list-count">7</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/BizDevOps/" style="font-size: 13.86px;">BizDevOps</a> <a href="/tags/IT%E7%A0%94%E5%8F%91%E6%8A%80%E6%9C%AF/" style="font-size: 13.43px;">IT研发技术</a> <a href="/tags/Playful%E5%A5%BD%E7%8E%A9/" style="font-size: 13.29px;">Playful好玩</a> <a href="/tags/%E4%B9%90%E9%AB%98%E8%AE%A4%E7%9C%9F%E7%8E%A9/" style="font-size: 13px;">乐高认真玩</a> <a href="/tags/%E5%BC%80%E6%BA%90/" style="font-size: 13.29px;">开源</a> <a href="/tags/%E6%8A%95%E8%B5%84/" style="font-size: 14px;">投资</a> <a href="/tags/%E6%95%8F%E6%8D%B7/" style="font-size: 13.71px;">敏捷</a> <a href="/tags/%E6%95%B0%E5%AD%97%E5%8C%96/" style="font-size: 13.57px;">数字化</a> <a href="/tags/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/" style="font-size: 13.14px;">移动开发</a> <a href="/tags/%E9%A2%86%E5%AF%BC%E5%8A%9B/" style="font-size: 13px;">领导力</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/">2026</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016</a><span class="archive-list-count">17</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/posts/0/" class="title">(no title)</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2026-05-20T06:52:15.179Z" itemprop="datePublished">2026-05-20</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/26240/" class="title">某大型金融科技组织敏捷DevOps转型案例简介</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-03-28T00:00:00.000Z" itemprop="datePublished">2023-03-28</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/10056/" class="title">高效团队-Google亚里士多德计划</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-01-31T00:00:00.000Z" itemprop="datePublished">2023-01-31</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/51086/" class="title">unFIX - 破幻求实的业务敏捷组织结构变革模型</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-09-18T00:00:00.000Z" itemprop="datePublished">2022-09-18</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/2ca8939/" class="title">unFIX模型-Forum(论坛)</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-04-13T00:00:00.000Z" itemprop="datePublished">2022-04-13</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-ai/20260520我做了一款智能AI模型路由" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/posts/0/" class="article-date">
+	  <time datetime="2026-05-20T06:52:15.179Z" itemprop="datePublished">2026-05-20</time>
+	</a>
+</span>
+        
+        
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/0/#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h1 id="我开源了-Smart-Router：一个让-AI-模型选择变得「无感」的智能路由网关"><a href="#我开源了-Smart-Router：一个让-AI-模型选择变得「无感」的智能路由网关" class="headerlink" title="我开源了 Smart Router：一个让 AI 模型选择变得「无感」的智能路由网关"></a>我开源了 Smart Router：一个让 AI 模型选择变得「无感」的智能路由网关</h1><blockquote>
+<p><strong>GitHub</strong>: <a target="_blank" rel="noopener" href="https://github.com/vaycentsun/smartRouter">vaycentsun&#x2F;smartRouter</a><br><strong>PyPI</strong>: <code>pip install smartRouter</code><br><strong>Homebrew</strong>: <code>brew install vaycentsun/smart-router/smart-router</code><br><strong>Docker</strong>: <code>docker pull vaycentsun/smart-router:latest</code><br><strong>License</strong>: MIT</p>
+</blockquote>
+<hr>
+<h2 id="为什么我要做这个产品"><a href="#为什么我要做这个产品" class="headerlink" title="为什么我要做这个产品"></a>为什么我要做这个产品</h2><p>在过去一年里，我同时用着 OpenAI、Anthropic、Kimi、Qwen、GLM 等多家大模型服务。每天写代码、写文档、做推理时，我都要手动判断：<strong>「这个任务该用哪个模型？哪个更划算？哪个更快？」</strong></p>
+<p>更头疼的是，不同的客户端（Cursor、Claude Code、自己写的脚本）各自维护一套模型配置，API Key 散落在各处，某家服务商挂了还得手动切换。</p>
+<p>我想：<strong>能不能做一个「中间层」，让上层只关心「我要做什么」，不关心「该调哪个模型」？</strong></p>
+<p>于是，Smart Router 诞生了。</p>
+<hr>
+<h2 id="🚀-Smart-Router-是什么"><a href="#🚀-Smart-Router-是什么" class="headerlink" title="🚀 Smart Router 是什么"></a>🚀 Smart Router 是什么</h2><p>Smart Router 是一个基于 <strong>LiteLLM</strong> 的多厂商大模型智能路由网关。它的核心理念很简单：</p>
+<blockquote>
+<p><strong>暴露统一的 OpenAI API 接口，自动根据任务类型和难度，选择最合适的底层模型。</strong></p>
+</blockquote>
+<p>你只需要记住一个 API Key、一个 base_url，剩下的交给它。</p>
+<hr>
+<h2 id="✨-核心能力一览"><a href="#✨-核心能力一览" class="headerlink" title="✨ 核心能力一览"></a>✨ 核心能力一览</h2><h3 id="🧠-智能路由：自动选择最优模型"><a href="#🧠-智能路由：自动选择最优模型" class="headerlink" title="🧠 智能路由：自动选择最优模型"></a>🧠 智能路由：自动选择最优模型</h3><p>Smart Router 内置任务分类器，能自动识别你的请求属于哪种场景：</p>
+<table>
+<thead>
+<tr>
+<th>任务类型</th>
+<th>典型场景</th>
+<th>自动优选模型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>code_review</code></td>
+<td>代码审查、重构建议</td>
+<td>Claude 3.5 Sonnet</td>
+</tr>
+<tr>
+<td><code>writing</code></td>
+<td>写文档、邮件、博客</td>
+<td>GPT-4o、Kimi K2</td>
+</tr>
+<tr>
+<td><code>reasoning</code></td>
+<td>复杂推理、数学证明</td>
+<td>Claude 3.5 Opus</td>
+</tr>
+<tr>
+<td><code>chat</code></td>
+<td>日常对话</td>
+<td>轻量模型，省钱</td>
+</tr>
+<tr>
+<td><code>brainstorming</code></td>
+<td>头脑风暴</td>
+<td>快速响应的模型</td>
+</tr>
+</tbody></table>
+<p>你也可以通过 <strong>Stage Marker</strong> 主动标记：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在 prompt 中标记任务类型</span></span><br><span class="line"><span class="string">&quot;[stage:code_review] 帮我 review 这段 Python 代码&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 标记难度</span></span><br><span class="line"><span class="string">&quot;[stage:writing] [difficulty:easy] 写一封请假邮件&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="🔑-单一入口：一把钥匙开所有门"><a href="#🔑-单一入口：一把钥匙开所有门" class="headerlink" title="🔑 单一入口：一把钥匙开所有门"></a>🔑 单一入口：一把钥匙开所有门</h3><p>无论你接入了多少家模型厂商，上层客户端永远只用一套配置：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> openai <span class="keyword">import</span> OpenAI</span><br><span class="line"></span><br><span class="line">client = OpenAI(</span><br><span class="line">    base_url=<span class="string">&quot;http://localhost:4000&quot;</span>,</span><br><span class="line">    api_key=<span class="string">&quot;sk-smart-router-local&quot;</span>  <span class="comment"># 永远不变</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 自动路由</span></span><br><span class="line">response = client.chat.completions.create(</span><br><span class="line">    model=<span class="string">&quot;auto&quot;</span>,</span><br><span class="line">    messages=[&#123;<span class="string">&quot;role&quot;</span>: <span class="string">&quot;user&quot;</span>, <span class="string">&quot;content&quot;</span>: <span class="string">&quot;解释快速排序&quot;</span>&#125;]</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h3 id="🔄-自动降级：一家挂了，自动换另一家"><a href="#🔄-自动降级：一家挂了，自动换另一家" class="headerlink" title="🔄 自动降级：一家挂了，自动换另一家"></a>🔄 自动降级：一家挂了，自动换另一家</h3><p>当某个模型返回错误或超时时，Smart Router 会根据预设的 <strong>Fallback 链</strong>，自动尝试能力相近的其他模型，无需人工干预。</p>
+<h3 id="📊-Web-管理后台：实时监控与调优"><a href="#📊-Web-管理后台：实时监控与调优" class="headerlink" title="📊 Web 管理后台：实时监控与调优"></a>📊 Web 管理后台：实时监控与调优</h3><p>内置的 Web Dashboard 让你能：</p>
+<ul>
+<li>实时查看各模型的错误率、响应时间、Token 消耗</li>
+<li>分析成本趋势，找到最优的成本&#x2F;质量平衡点</li>
+<li>在线调整路由策略，无需重启服务</li>
+</ul>
+<p><img src="/docs/assets/screenshots/dashboard.png" alt="Dashboard"></p>
+<hr>
+<h2 id="🛠️-快速上手（5-分钟）"><a href="#🛠️-快速上手（5-分钟）" class="headerlink" title="🛠️ 快速上手（5 分钟）"></a>🛠️ 快速上手（5 分钟）</h2><h3 id="方式一：PyPI-安装（推荐）"><a href="#方式一：PyPI-安装（推荐）" class="headerlink" title="方式一：PyPI 安装（推荐）"></a>方式一：PyPI 安装（推荐）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install smartRouter</span><br></pre></td></tr></table></figure>
+
+<h3 id="方式二：Homebrew-安装（macOS）"><a href="#方式二：Homebrew-安装（macOS）" class="headerlink" title="方式二：Homebrew 安装（macOS）"></a>方式二：Homebrew 安装（macOS）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew tap vaycentsun/smart-router</span><br><span class="line">brew install smart-router</span><br></pre></td></tr></table></figure>
+
+<h3 id="方式三：Docker-安装"><a href="#方式三：Docker-安装" class="headerlink" title="方式三：Docker 安装"></a>方式三：Docker 安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 拉取镜像</span></span><br><span class="line">docker pull vaycentsun/smart-router:latest</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建配置目录</span></span><br><span class="line"><span class="built_in">mkdir</span> -p ~/.smart-router</span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动容器</span></span><br><span class="line">docker run -d \</span><br><span class="line">  -p 4000:4000 \</span><br><span class="line">  -v ~/.smart-router:/root/.smart-router \</span><br><span class="line">  --name smart-router \</span><br><span class="line">  vaycentsun/smart-router:latest</span><br></pre></td></tr></table></figure>
+
+<h3 id="方式四：本地源码安装"><a href="#方式四：本地源码安装" class="headerlink" title="方式四：本地源码安装"></a>方式四：本地源码安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 克隆仓库</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/vaycentsun/smartRouter.git</span><br><span class="line"><span class="built_in">cd</span> smartRouter</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装依赖（建议使用虚拟环境）</span></span><br><span class="line">pip install -e .</span><br></pre></td></tr></table></figure>
+
+<h3 id="初始化配置"><a href="#初始化配置" class="headerlink" title="初始化配置"></a>初始化配置</h3><p>无论哪种安装方式，首次使用都需要初始化配置：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">smart-router init</span><br></pre></td></tr></table></figure>
+
+<p>这会生成三个配置文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">~/.smart-router/</span><br><span class="line">├── providers.yaml    # 各厂商 API Key 和地址</span><br><span class="line">├── models.yaml       # 模型能力评分</span><br><span class="line">└── routing.yaml      # 任务定义和路由策略</span><br></pre></td></tr></table></figure>
+
+<p>编辑 <code>providers.yaml</code>，添加你的 API Key：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">openai:</span></span><br><span class="line">  <span class="attr">api_key:</span> <span class="string">$&#123;OPENAI_API_KEY&#125;</span></span><br><span class="line">  <span class="attr">base_url:</span> <span class="string">https://api.openai.com/v1</span></span><br><span class="line"></span><br><span class="line"><span class="attr">anthropic:</span></span><br><span class="line">  <span class="attr">api_key:</span> <span class="string">$&#123;ANTHROPIC_API_KEY&#125;</span></span><br><span class="line">  <span class="attr">base_url:</span> <span class="string">https://api.anthropic.com/v1</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>安全提示</strong>：API Key 请通过环境变量注入，不要直接写在配置文件中！</p>
+</blockquote>
+<h3 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">smart-router start</span><br></pre></td></tr></table></figure>
+
+<p>然后，把你的客户端 base_url 改成 <code>http://localhost:4000</code>，就能享受智能路由了。</p>
+<hr>
+<h2 id="技术架构"><a href="#技术架构" class="headerlink" title="技术架构"></a>技术架构</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">用户请求 → LiteLLM Proxy → SmartRouter Plugin</span><br><span class="line">                              ├── Stage Marker 解析</span><br><span class="line">                              ├── 任务分类（规则 + Embedding 相似度）</span><br><span class="line">                              ├── 模型选择（auto / cost 策略）</span><br><span class="line">                              └── Fallback 链管理</span><br><span class="line">                   ↓</span><br><span class="line">           目标模型厂商</span><br></pre></td></tr></table></figure>
+
+<p>技术栈：</p>
+<ul>
+<li><strong>后端</strong>：Python 3.9+，基于 LiteLLM 和 FastAPI</li>
+<li><strong>前端</strong>：Vite + TypeScript，内嵌到 Python 包中</li>
+<li><strong>配置</strong>：YAML 三文件解耦架构，热重载支持</li>
+</ul>
+<hr>
+<h2 id="💡-我的设计理念"><a href="#💡-我的设计理念" class="headerlink" title="💡 我的设计理念"></a>💡 我的设计理念</h2><p>做 Smart Router 时，我坚持了几个原则：</p>
+<ol>
+<li><strong>对上层透明</strong>：客户端零改造，只需改 base_url</li>
+<li><strong>配置即代码</strong>：路由策略写在 YAML 里，版本可控、可复现</li>
+<li><strong>安全优先</strong>：API Key 禁止明文，必须通过环境变量引用</li>
+<li><strong>开箱即用</strong>：内置合理的默认策略，新手也能直接用</li>
+</ol>
+<hr>
+<h2 id="👥-谁适合用-Smart-Router"><a href="#👥-谁适合用-Smart-Router" class="headerlink" title="👥 谁适合用 Smart Router"></a>👥 谁适合用 Smart Router</h2><ul>
+<li><strong>多模型用户</strong>：同时用着多家 API，想统一管理</li>
+<li><strong>成本敏感者</strong>：想在质量和价格间找最优解</li>
+<li><strong>团队管理者</strong>：想统一团队的模型接入方式，便于审计和管控</li>
+<li><strong>开发者</strong>：想给自己写的 AI 工具加个智能路由层</li>
+</ul>
+<hr>
+<h2 id="🌐-开源与社区"><a href="#🌐-开源与社区" class="headerlink" title="🌐 开源与社区"></a>🌐 开源与社区</h2><p>Smart Router 采用 <strong>MIT 协议</strong> 完全开源。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 欢迎 Star、Issue、PR</span></span><br><span class="line">https://github.com/vaycentsun/smartRouter</span><br></pre></td></tr></table></figure>
+
+<p>目前项目还在快速迭代中，近期 focus 的几个方向：</p>
+<ul>
+<li><input disabled="" type="checkbox"> 更细粒度的 Token 级成本统计</li>
+<li><input disabled="" type="checkbox"> 基于历史数据的路由策略自动优化</li>
+<li><input disabled="" type="checkbox"> 更丰富的 Web 可视化（Fallback 链、模型对比）</li>
+</ul>
+<p>如果你也有「模型选择困难症」，欢迎试用，也欢迎来聊！</p>
+<hr>
+<p><em>写于 2026 年春（与AI共同编写）。如果你读到这里，说明你也关心 AI 基础设施的效率问题——我们应该聊聊。</em></p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://vaycent.com/posts/0/" title="" target="_blank" rel="external">https://vaycent.com/posts/0/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20210207002337.png" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20210207002337.png" target="_blank"><span class="text-dark">🤖Vaycent孙维</span><small class="ml-1x">AI与IT的咨询顾问</small></a></h3>
+        <div>专注为企业以及个人提供数字化、敏捷DevOps、IT技术研发、需求分析的咨询服务</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    
+    <li class="next">
+      <a href="/posts/26240/" title="某大型金融科技组织敏捷DevOps转型案例简介"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,wechat,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/vaycent" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://xueqiu.com/vaycent" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://www.behance.net/vaycentsun" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        &copy; 2026 🤖Vaycent孙维
+        
+        <div class="publishby">
+		<!-- <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备20008800号</a> -->
+
+        <!--
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        -->
+        
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+
+
+
+
+   
+
+
+
+
+
+    <script defer>
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?77790ea31b04cf9ba059d113a90e3448";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+</body>
+</html>

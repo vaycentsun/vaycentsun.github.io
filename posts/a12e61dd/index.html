@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>unFIX模型-Base(基地) | vaycent.com</title>
+  <meta name="description" content="Bases（基地） Bases（基地）是激发认同感和归属感的地方 适应性组织设计据说，人们辞职的首要原因是缺乏认同感和归属感。好吧，这实际上是两个原因。对于自己所关心的群体，员工希望感受到自己是其中的一部分（如家庭、学校班级或体育俱乐部等），希望可以因自己对群体的贡献而得到赞赏。 许多专家似乎都认同群体的规模不应该超过150人左右（向邓巴数字致敬）。然而，你所在企业中的Base（基地）的实际规模可">
+<meta property="og:type" content="article">
+<meta property="og:title" content="unFIX模型-Base(基地)">
+<meta property="og:url" content="https://vaycent.com/posts/a12e61dd/index.html">
+<meta property="og:site_name" content="🤖Vaycent孙维">
+<meta property="og:description" content="Bases（基地） Bases（基地）是激发认同感和归属感的地方 适应性组织设计据说，人们辞职的首要原因是缺乏认同感和归属感。好吧，这实际上是两个原因。对于自己所关心的群体，员工希望感受到自己是其中的一部分（如家庭、学校班级或体育俱乐部等），希望可以因自己对群体的贡献而得到赞赏。 许多专家似乎都认同群体的规模不应该超过150人左右（向邓巴数字致敬）。然而，你所在企业中的Base（基地）的实际规模可">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20220315115547.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20220315115716.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20220315115809.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20220315115830.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20220315115651.png">
+<meta property="article:published_time" content="2022-03-15T00:00:00.000Z">
+<meta property="article:modified_time" content="2026-03-24T09:59:49.077Z">
+<meta property="article:author" content="🤖Vaycent孙维">
+<meta property="article:tag" content="BizDevOps">
+<meta property="article:tag" content="敏捷">
+<meta property="article:tag" content="数字化">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20220315115547.png">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://vaycent.com/posts/a12e61dd/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="🤖Vaycent孙维" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20210207002337.png" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">🤖Vaycent孙维</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">AI与IT的咨询顾问</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Guangzhou, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+            <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+            <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+            <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+            <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+            <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">友链</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+            <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于我</span>
+          </a>          
+        </li>
+        
+ 
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/vaycent" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://xueqiu.com/vaycent" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://www.behance.net/vaycentsun" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+  
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>我很懒，总是不更新内容</p><p>可通过点击头像加我微信好友哦～</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%95%E8%B5%84/">投资</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A0%94%E5%8F%91%E6%8A%80%E6%9C%AF%E5%AE%9E%E8%B7%B5/">研发技术实践</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a><span class="category-list-count">7</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/BizDevOps/" style="font-size: 13.86px;">BizDevOps</a> <a href="/tags/IT%E7%A0%94%E5%8F%91%E6%8A%80%E6%9C%AF/" style="font-size: 13.43px;">IT研发技术</a> <a href="/tags/Playful%E5%A5%BD%E7%8E%A9/" style="font-size: 13.29px;">Playful好玩</a> <a href="/tags/%E4%B9%90%E9%AB%98%E8%AE%A4%E7%9C%9F%E7%8E%A9/" style="font-size: 13px;">乐高认真玩</a> <a href="/tags/%E5%BC%80%E6%BA%90/" style="font-size: 13.29px;">开源</a> <a href="/tags/%E6%8A%95%E8%B5%84/" style="font-size: 14px;">投资</a> <a href="/tags/%E6%95%8F%E6%8D%B7/" style="font-size: 13.71px;">敏捷</a> <a href="/tags/%E6%95%B0%E5%AD%97%E5%8C%96/" style="font-size: 13.57px;">数字化</a> <a href="/tags/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/" style="font-size: 13.14px;">移动开发</a> <a href="/tags/%E9%A2%86%E5%AF%BC%E5%8A%9B/" style="font-size: 13px;">领导力</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/">2026</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016</a><span class="archive-list-count">17</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/posts/0/" class="title">(no title)</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2026-05-20T06:52:15.179Z" itemprop="datePublished">2026-05-20</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/26240/" class="title">某大型金融科技组织敏捷DevOps转型案例简介</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-03-28T00:00:00.000Z" itemprop="datePublished">2023-03-28</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/10056/" class="title">高效团队-Google亚里士多德计划</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-01-31T00:00:00.000Z" itemprop="datePublished">2023-01-31</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/51086/" class="title">unFIX - 破幻求实的业务敏捷组织结构变革模型</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-09-18T00:00:00.000Z" itemprop="datePublished">2022-09-18</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/2ca8939/" class="title">unFIX模型-Forum(论坛)</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-04-13T00:00:00.000Z" itemprop="datePublished">2022-04-13</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+  <aside class="sidebar sidebar-toc collapse   in  " id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Bases%EF%BC%88%E5%9F%BA%E5%9C%B0%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">Bases（基地）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%82%E5%BA%94%E6%80%A7%E7%BB%84%E7%BB%87%E8%AE%BE%E8%AE%A1"><span class="toc-number">1.1.</span> <span class="toc-text">适应性组织设计</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Fully-Integrated-Bases%EF%BC%88%E5%85%A8%E9%9B%86%E6%88%90%E5%9F%BA%E5%9C%B0%EF%BC%89"><span class="toc-number">2.</span> <span class="toc-text">Fully Integrated Bases（全集成基地）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Strongly-Aligned-Bases%EF%BC%88%E8%81%9A%E5%90%88%E5%AF%B9%E9%BD%90%E5%9F%BA%E5%9C%B0%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">Strongly Aligned Bases（聚合对齐基地）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Loosely-Aligned-Bases%EF%BC%88%E6%9D%BE%E6%95%A3%E5%AF%B9%E9%BD%90%E5%9F%BA%E5%9C%B0%EF%BC%89"><span class="toc-number">4.</span> <span class="toc-text">Loosely Aligned Bases（松散对齐基地）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Fully-Segregated-Bases%EF%BC%88%E5%85%A8%E9%9A%94%E7%A6%BB%E5%9F%BA%E5%9C%B0%EF%BC%89"><span class="toc-number">5.</span> <span class="toc-text">Fully Segregated Bases（全隔离基地）</span></a></li></ol>
+    </nav>
+  </div>
+</aside>
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-20220315unFIX模型-Base(基地)" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      unFIX模型-Base(基地)
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/posts/a12e61dd/" class="article-date">
+	  <time datetime="2022-03-15T00:00:00.000Z" itemprop="datePublished">2022-03-15</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/BizDevOps/" rel="tag">BizDevOps</a>, <a class="article-tag-link-link" href="/tags/%E6%95%8F%E6%8D%B7/" rel="tag">敏捷</a>, <a class="article-tag-link-link" href="/tags/%E6%95%B0%E5%AD%97%E5%8C%96/" rel="tag">数字化</a>
+  </span>
+
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/a12e61dd/#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h1 id="Bases（基地）"><a href="#Bases（基地）" class="headerlink" title="Bases（基地）"></a>Bases（基地）</h1><p><img src="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20220315115547.png" alt="image-20220315115540751"></p>
+<p>Bases（基地）是激发认同感和归属感的地方</p>
+<h2 id="适应性组织设计"><a href="#适应性组织设计" class="headerlink" title="适应性组织设计"></a>适应性组织设计</h2><p>据说，人们辞职的首要原因是缺乏认同感和归属感。好吧，这实际上是两个原因。对于自己所关心的群体，员工希望感受到自己是其中的一部分（如家庭、学校班级或体育俱乐部等），希望可以因自己对群体的贡献而得到赞赏。</p>
+<p>许多专家似乎都认同群体的规模不应该超过150人左右（向邓巴数字致敬）。然而，你所在企业中的Base（基地）的实际规模可能差异很大，但是当团队变得太大时，社会凝聚力就会崩溃。（正如我亲身经历的那样，在圣诞晚宴的活动大厅上，很难与4000人建立连接。）</p>
+<p>Base（基地）的其他名称可以是部落、氏族或业务单元。但我喜欢”Base（基地）”这个词，它标志着这是Crews（机组）完成任务后回归的群体。你也可以说这是每个人的家。</p>
+<p>Base（基地）可以被看做一个完全自立的企业。它可能会将部分（甚至全部）非核心活动（如基础设施和共享服务）外包给其他Base（基地），唯一不能委托的是其核心业务。Base（基地）的核心活动包括以客户为中心的工作和以价值主张为导向的商业模式。换言之，Base（基地）服务的领域是为了满足某些客户的需求或愿望，这些客户可以是企业内部的，也可以是外部的。因此，Base（基地）中的每个人都会围绕着一个要解决的问题或一个要追求的机会紧密地团结在一起。</p>
+<p>在设计适应性组织时，我强烈建议大部分员工只隶属于一个Base（基地）。我们大多数人很难将忠诚度分散到同一类型的多个社会群体中。我们更愿意隶属于一个家庭、一个班级、一个体育俱乐部或一个业务单元。当然，总有例外。我在这里提供一条经验法则：</p>
+<p>在Base（基地）内部，人们可在一个或多个Crew（机组）以及一个或多个Forum（论坛）中工作。但至关重要的是，这些Crew（机组）和Forum（论坛）都没有直线经理。Base（基地）中没有中层管理人员。唯一的管理层是Governance Crew（治理机组）中的Chiefs（指挥官）。</p>
+<h1 id="Fully-Integrated-Bases（全集成基地）"><a href="#Fully-Integrated-Bases（全集成基地）" class="headerlink" title="Fully Integrated Bases（全集成基地）"></a>Fully Integrated Bases（全集成基地）</h1><p><img src="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20220315115716.png" alt="image-20220315115715200"></p>
+<p>在全集成Base（基地）里，你可以将整个产品构建和部署为一个解决方案。</p>
+<p>某些Base（基地）由多个价值流机组（Value Stream Crew）构成，它们共同形成一个完整的整体。例如，你可以将一个产品划分为不同的功能集（每个价值流机组负责一个），并将整个产品作为一个解决方案进行构建和部署。</p>
+<p>全集成Base（基地）是适应性组织设计中的四种Base（基地）之一。</p>
+<p>在一个全集成Base（基地）中，你需要在Value Stream Crews（价值流机组）之间进行大量的协调。他们需要以相同的节奏（对于迭代和增量）运作，并通过Facilitation Crews（赋能促进机组）（敏捷教练、产品经理、技术负责人）来帮助Crew（机组）解决依赖关系和优化并部署完整的解决方案。</p>
+<p>注意：SAFe and LeSS等框架隐含着Base（基地）都是“全集成的”这样一个假设。</p>
+<h1 id="Strongly-Aligned-Bases（聚合对齐基地）"><a href="#Strongly-Aligned-Bases（聚合对齐基地）" class="headerlink" title="Strongly Aligned Bases（聚合对齐基地）"></a>Strongly Aligned Bases（聚合对齐基地）</h1><p><img src="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20220315115809.png" alt="image-20220315115808081"></p>
+<p>在聚合对齐Base（基地）中，你可以对每个部分进行独立的构建和部署。</p>
+<p><strong>某些Base（基地）由为客户提供服务的多个价值流共同组成，尽管它们的生产作业在很大程度上是独立发生的</strong>。例如，将产品划分为各种组件（每个Value Stream Crews（价值流机组）负责一个），每个组件都可以独立的构建和部署。</p>
+<p>聚合对齐Base（基地）是适应性组织设计中的四种Base（基地）之一。</p>
+<p>在聚合对齐Base（基地）中，你需要在Value Stream Crews（价值流机组）之间进行协调，因为这些组件需要形成一个有凝聚力的整体。在这种情况下，价值流不必以相同的节奏运行（对于迭代和增量）。然而，多个Facilitation Crews（赋能促进机组）（敏捷教练，产品经理，技术主管）仍然可以帮助Crew（机组）解决依赖关系和优化整个解决方案。</p>
+<p>注意：Spotify 模型的最初形态就是聚合对齐的Base（基地）。</p>
+<h1 id="Loosely-Aligned-Bases（松散对齐基地）"><a href="#Loosely-Aligned-Bases（松散对齐基地）" class="headerlink" title="Loosely Aligned Bases（松散对齐基地）"></a>Loosely Aligned Bases（松散对齐基地）</h1><p><img src="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20220315115830.png" alt="image-20220315115829813"></p>
+<p>通过松散对齐Base（基地），客户可以单独使用每个产品。</p>
+<p>某些Base（基地）由多个产品组成，这些产品单独提供给相同类型的客户，但它们之间仍有某种程度的集成关系或。例如，一个由多个应用程序（每个Value Stream Crews（价值流机组）负责一个）组成的产品组合，客户也可以独立使用组合里的每个产品。</p>
+<p>松散对齐Base（基地）是适应性组织设计中的四种Base（基地）之一。</p>
+<p>在松散对齐Base（基地）中，你需要在Value Stream Crews（价值流机组）之间进行一些协调，因为多个产品需要适配Base（基地）的大局和战略。在这种情况下，价值流不以相同的节奏（对于迭代和增量）运行，最好能有一个Experience Crew（体验机组）来把控横跨多个产品的客户旅程和用户体验。 </p>
+<h1 id="Fully-Segregated-Bases（全隔离基地）"><a href="#Fully-Segregated-Bases（全隔离基地）" class="headerlink" title="Fully Segregated Bases（全隔离基地）"></a>Fully Segregated Bases（全隔离基地）</h1><p><img src="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20220315115651.png" alt="image-20220315115650431">在全隔离Base（基地）中，客户通常只使用一个产品。</p>
+<p>某些Base（基地）由提供给不同客户的多个产品组成，它们之间没有任何集成关系或连接性。举个关于孵化器的例子，它由一系列的初创公司组成（每个Value Stream Crews（价值流机组）负责一个），而客户通常只使用其中的一个产品，甚至可能都不知道有其他的选项存在。</p>
+<p>全隔离Base（基地）是适应性组织设计中的四种Base（基地）之一。</p>
+<p>在一个全隔离Base（基地）中，Value Stream Crews（价值流机组）之间不需要协调，多个产品之间甚至可能相互竞争。价值流不会以相同的节奏（对于迭代和增量）运作，并且，Experience Crew（体验机组）也不需要。</p>
+<hr>
+<p>原文作者<a target="_blank" rel="noopener" href="https://unfix.work/blog?author=61af660b9cfd0b1e461c6df5">：Jurgen Appelo</a></p>
+<p>原文链接：<a target="_blank" rel="noopener" href="https://unfix.work/base">https://unfix.work/base</a></p>
+<p>中文翻译：Vaycent 孙维</p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://vaycent.com/posts/a12e61dd/" title="unFIX模型-Base(基地)" target="_blank" rel="external">https://vaycent.com/posts/a12e61dd/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20210207002337.png" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20210207002337.png" target="_blank"><span class="text-dark">🤖Vaycent孙维</span><small class="ml-1x">AI与IT的咨询顾问</small></a></h3>
+        <div>专注为企业以及个人提供数字化、敏捷DevOps、IT技术研发、需求分析的咨询服务</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/posts/2ca8939/" title="unFIX模型-Forum(论坛)"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/posts/51087/" title="unFIX模型-敏捷组织结构"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn " data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">    <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,wechat,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/vaycent" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://xueqiu.com/vaycent" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://www.behance.net/vaycentsun" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        &copy; 2026 🤖Vaycent孙维
+        
+        <div class="publishby">
+		<!-- <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备20008800号</a> -->
+
+        <!--
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        -->
+        
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+
+
+
+
+   
+
+
+
+
+
+    <script defer>
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?77790ea31b04cf9ba059d113a90e3448";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+</body>
+</html>

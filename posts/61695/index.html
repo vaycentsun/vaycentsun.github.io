@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>为什么你的单元测试IT管理总是失效 | vaycent.com</title>
+  <meta name="description" content="为什么你的单元测试IT管理总是失效《从Kotlin双锁单例中学习到…》 《为你的Android实现测试覆盖率》 《为你的Android添加第一个单元测试》 ​		续上之前单元测试系列，此篇将从单元测试发散开来，讨论有关于单测上IT管理的思考点，此篇会尽量少用技术语言来讲述技术问题并按以下主题叙述：  “我们不需要单测”是一种迷思  你的覆盖率指标质量管理总是失效  单测和覆盖率该怎么用  质量完">
+<meta property="og:type" content="article">
+<meta property="og:title" content="为什么你的单元测试IT管理总是失效">
+<meta property="og:url" content="https://vaycent.com/posts/61695/index.html">
+<meta property="og:site_name" content="🤖Vaycent孙维">
+<meta property="og:description" content="为什么你的单元测试IT管理总是失效《从Kotlin双锁单例中学习到…》 《为你的Android实现测试覆盖率》 《为你的Android添加第一个单元测试》 ​		续上之前单元测试系列，此篇将从单元测试发散开来，讨论有关于单测上IT管理的思考点，此篇会尽量少用技术语言来讲述技术问题并按以下主题叙述：  “我们不需要单测”是一种迷思  你的覆盖率指标质量管理总是失效  单测和覆盖率该怎么用  质量完">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20210127230726.jpeg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20210127230743.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20210127230818.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20210127230806.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20210127230827.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20210127230851.png">
+<meta property="article:published_time" content="2021-01-03T00:00:00.000Z">
+<meta property="article:modified_time" content="2026-03-24T09:59:49.076Z">
+<meta property="article:author" content="🤖Vaycent孙维">
+<meta property="article:tag" content="IT研发技术">
+<meta property="article:tag" content="BizDevOps">
+<meta property="article:tag" content="敏捷">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20210127230726.jpeg">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://vaycent.com/posts/61695/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="🤖Vaycent孙维" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20210207002337.png" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">🤖Vaycent孙维</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">AI与IT的咨询顾问</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Guangzhou, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+            <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+            <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+            <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+            <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+            <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">友链</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+            <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于我</span>
+          </a>          
+        </li>
+        
+ 
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/vaycent" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://xueqiu.com/vaycent" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://www.behance.net/vaycentsun" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+  
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>我很懒，总是不更新内容</p><p>可通过点击头像加我微信好友哦～</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%95%E8%B5%84/">投资</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A0%94%E5%8F%91%E6%8A%80%E6%9C%AF%E5%AE%9E%E8%B7%B5/">研发技术实践</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a><span class="category-list-count">7</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/BizDevOps/" style="font-size: 13.86px;">BizDevOps</a> <a href="/tags/IT%E7%A0%94%E5%8F%91%E6%8A%80%E6%9C%AF/" style="font-size: 13.43px;">IT研发技术</a> <a href="/tags/Playful%E5%A5%BD%E7%8E%A9/" style="font-size: 13.29px;">Playful好玩</a> <a href="/tags/%E4%B9%90%E9%AB%98%E8%AE%A4%E7%9C%9F%E7%8E%A9/" style="font-size: 13px;">乐高认真玩</a> <a href="/tags/%E5%BC%80%E6%BA%90/" style="font-size: 13.29px;">开源</a> <a href="/tags/%E6%8A%95%E8%B5%84/" style="font-size: 14px;">投资</a> <a href="/tags/%E6%95%8F%E6%8D%B7/" style="font-size: 13.71px;">敏捷</a> <a href="/tags/%E6%95%B0%E5%AD%97%E5%8C%96/" style="font-size: 13.57px;">数字化</a> <a href="/tags/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/" style="font-size: 13.14px;">移动开发</a> <a href="/tags/%E9%A2%86%E5%AF%BC%E5%8A%9B/" style="font-size: 13px;">领导力</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/">2026</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016</a><span class="archive-list-count">17</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/posts/0/" class="title">(no title)</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2026-05-20T06:52:15.179Z" itemprop="datePublished">2026-05-20</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/26240/" class="title">某大型金融科技组织敏捷DevOps转型案例简介</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-03-28T00:00:00.000Z" itemprop="datePublished">2023-03-28</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/10056/" class="title">高效团队-Google亚里士多德计划</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-01-31T00:00:00.000Z" itemprop="datePublished">2023-01-31</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/51086/" class="title">unFIX - 破幻求实的业务敏捷组织结构变革模型</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-09-18T00:00:00.000Z" itemprop="datePublished">2022-09-18</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/2ca8939/" class="title">unFIX模型-Forum(论坛)</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-04-13T00:00:00.000Z" itemprop="datePublished">2022-04-13</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+  <aside class="sidebar sidebar-toc collapse   in  " id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%A0%E7%9A%84%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95IT%E7%AE%A1%E7%90%86%E6%80%BB%E6%98%AF%E5%A4%B1%E6%95%88"><span class="toc-number">1.</span> <span class="toc-text">为什么你的单元测试IT管理总是失效</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E4%BB%AC%E4%B8%8D%E9%9C%80%E8%A6%81%E5%8D%95%E6%B5%8B%E2%80%9D%E6%98%AF%E4%B8%80%E7%A7%8D%E8%BF%B7%E6%80%9D"><span class="toc-number">2.</span> <span class="toc-text">我们不需要单测”是一种迷思</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%A0%E7%9A%84%E8%A6%86%E7%9B%96%E7%8E%87%E6%8C%87%E6%A0%87%E8%B4%A8%E9%87%8F%E7%AE%A1%E7%90%86%E6%80%BB%E6%98%AF%E5%A4%B1%E6%95%88"><span class="toc-number">3.</span> <span class="toc-text">你的覆盖率指标质量管理总是失效</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E6%B5%8B%E5%92%8C%E8%A6%86%E7%9B%96%E7%8E%87%E8%AF%A5%E6%80%8E%E4%B9%88%E7%94%A8"><span class="toc-number">4.</span> <span class="toc-text">单测和覆盖率该怎么用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B4%A8%E9%87%8F%E5%AE%8C%E6%88%90%E4%B8%8E%E8%B4%A8%E9%87%8F%E8%BE%BE%E6%88%90"><span class="toc-number">5.</span> <span class="toc-text">质量完成与质量达成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8E%E5%8D%95%E6%B5%8B%E4%B8%AD%E5%B8%AE%E5%8A%A9%E4%BA%BA%E6%8C%81%E7%BB%AD%E5%AD%A6%E4%B9%A0"><span class="toc-number">6.</span> <span class="toc-text">从单测中帮助人持续学习</span></a></li></ol>
+    </nav>
+  </div>
+</aside>
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-20210103为什么你的单元测试IT管理总是失效" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      为什么你的单元测试IT管理总是失效
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/posts/61695/" class="article-date">
+	  <time datetime="2021-01-03T00:00:00.000Z" itemprop="datePublished">2021-01-03</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E7%A0%94%E5%8F%91%E6%8A%80%E6%9C%AF%E5%AE%9E%E8%B7%B5/">研发技术实践</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/BizDevOps/" rel="tag">BizDevOps</a>, <a class="article-tag-link-link" href="/tags/IT%E7%A0%94%E5%8F%91%E6%8A%80%E6%9C%AF/" rel="tag">IT研发技术</a>, <a class="article-tag-link-link" href="/tags/%E6%95%8F%E6%8D%B7/" rel="tag">敏捷</a>
+  </span>
+
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/61695/#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <p><img src="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20210127230726.jpeg"></p>
+<h2 id="为什么你的单元测试IT管理总是失效"><a href="#为什么你的单元测试IT管理总是失效" class="headerlink" title="为什么你的单元测试IT管理总是失效"></a>为什么你的单元测试IT管理总是失效</h2><p>《<a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzUxMDQwNTYwMA==&mid=2247483791&idx=1&sn=fc04da7c3a116a6f7e0e9e2b9dfac2a9&chksm=f9023f00ce75b616a5f33f54b73f8af9431d799eae2a6eb0ccaa6c4f3092aaf7e169e2b8a6b6&scene=21#wechat_redirect">从Kotlin双锁单例中学习到…</a>》</p>
+<p>《<a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzUxMDQwNTYwMA==&mid=2247483815&idx=1&sn=ebc9deb628b8568a308764e8b4809777&chksm=f9023f28ce75b63e9b07e7cbeaa93cf4bbc0c09df6566777deeb18310f92060a8242a6106db7&scene=21#wechat_redirect">为你的Android实现测试覆盖率</a>》</p>
+<p>《<a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzUxMDQwNTYwMA==&mid=2247483804&idx=1&sn=0b5397fb83e34223351378e2b2d57c99&chksm=f9023f13ce75b60581caac9c882e9aff1932939ab96e7e279a5ee569a176c117981015f2df8f&scene=21#wechat_redirect">为你的Android添加第一个单元测试</a>》</p>
+<p>​		续上之前单元测试系列，此篇将从单元测试发散开来，讨论有关于单测上IT管理的思考点，此篇会尽量少用技术语言来讲述技术问题并按以下<strong>主题</strong>叙述：</p>
+<ul>
+<li><p><strong>“我们不需要单测”是一种迷思</strong></p>
+</li>
+<li><p><strong>你的覆盖率指标质量管理总是失效</strong></p>
+</li>
+<li><p><strong>单测和覆盖率该怎么用</strong></p>
+</li>
+<li><p><strong>质量完成与质量达成</strong></p>
+</li>
+<li><p><strong>从单测中帮助人持续学习</strong></p>
+</li>
+</ul>
+<h2 id="我们不需要单测”是一种迷思"><a href="#我们不需要单测”是一种迷思" class="headerlink" title="我们不需要单测”是一种迷思"></a>我们不需要单测”是一种迷思</h2><p>相信大多数人都会或多或少碰到，甚至在说以下言论：</p>
+<ul>
+<li><p>“我们没有足够的成本做单元测试”</p>
+</li>
+<li><p>“我们开发已经很忙没时间做单元测试”</p>
+</li>
+<li><p>“我们的项目是一次性交付的，不需要反复的测试”</p>
+</li>
+<li><p>“我们不需要单元测试，它没有用”</p>
+</li>
+<li><p>“我们已经有自动化测试，不需要它”</p>
+</li>
+</ul>
+<p>那么这些团队通常是在怎么做测试的呢？通常是如下：</p>
+<ul>
+<li><p>开发完成后，告诉测试人员改了什么，测试人员手工测试点点点。</p>
+</li>
+<li><p>测试人员根据需求文档出用例，开发完成后，测试人员手工测试点点点。</p>
+</li>
+<li><p>一次性开发完成，找测试人员手工测试点点点，通过完成交货。</p>
+</li>
+<li><p>采购UI自动化工具，做了一些用例，然后这些自动化测试总是跑失败，或者跟构建完版本耦合，每次都要重新录制，慢慢就没人管实际情况只管对外说我们已经实现自动化。</p>
+</li>
+</ul>
+<p>以上这些处理方式的假设前提到底是什么呢？</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20210127230743.png"></p>
+<p>​		我们认为的开发和测试范围占比是左边这样，而实际上它应该是右边这样，随着开发完成的内容增多，每次测试的范围都在扩大，如果不加入自动化测试，很快就会因为交付速度过慢导致项目失控。</p>
+<p>​		但是为什么所有项目都没有失控呢？</p>
+<p>​		因为所有人都在假设….</p>
+<p>​		假设只要有人（开发&#x2F;需求）负责框出本次增量，清晰“已知影响范围“，那么根据这个范围就能准确地验证结果。然而它只是解决“已知影响范围”下的验证结果，无法针对“未知影响范围”，所以这样假设是矛盾的。</p>
+<p>​		<strong>正因为人无法清晰所有“影响范围”，所以质量出现问题。</strong></p>
+<p>​		那么，一次性项目是否就没有测试必要呢？</p>
+<p>​		当然也不是…</p>
+<p>​		即使一次性交付项目，我们继续细化来看。<strong>程序猿们每一次点击Run按钮构建项目都是一次反馈机会</strong>，如果无法对本次Run进行测试，亦无法确保本次新增的“影响范围”，更何况是经过无数次增量和运行的项目版本交付。</p>
+<p>​		（P.S.如果你非要说，我们的开发都很牛掰，只管写代码不构建，几个月之后才构建一次项目并顺利交付。好吧，那么我输了）</p>
+<h2 id="你的覆盖率指标质量管理总是失效"><a href="#你的覆盖率指标质量管理总是失效" class="headerlink" title="你的覆盖率指标质量管理总是失效"></a>你的覆盖率指标质量管理总是失效</h2><p>​		经常看到管理人员要求项目的测试覆盖率指标，作为管理项目质量的标准，那么到底需要多少的覆盖百分比，才是质量的保证呢？答案是：</p>
+<p>​		<strong>作为管理指标，覆盖率没有任何作用。</strong></p>
+<p>​		作为一名程序猿追求更高的覆盖率可能是他对追求技术卓越的结果，而作为一名管理者要求覆盖率指标，那更大可能是他对团队的量化&#x2F;考核&#x2F;衡量。“当管理用怎样的指标来要求，就会得到怎样的结果”，而程序猿又是一群小机灵鬼，他们有一百种方法让你的指标待不下去。举两个简单例子：</p>
+<p>例子一：增加实际无用的方法和测试以提高覆盖率</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20210127230818.png"></p>
+<p>例子二：不做断言使得测试通过</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20210127230806.png"></p>
+<h2 id="单测和覆盖率该怎么用"><a href="#单测和覆盖率该怎么用" class="headerlink" title="单测和覆盖率该怎么用"></a>单测和覆盖率该怎么用</h2><p>​		上面举的两个小机灵鬼的例子，当然也有方法去检测，可当我们引入怀疑论之后，又应如何检测这个检测的质量呢？此时会陷入一个套娃模式。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20210127230827.png"></p>
+<p>​		<strong>增加一层监管，永远无法解决怀疑的问题</strong></p>
+<p>​		这样的话，单元测试和覆盖率又应怎么使用呢？</p>
+<p>​		答案是：<strong>把它当成是反馈手段，而不是考核的手段</strong>。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20210127230851.png"></p>
+<p>​		这也是为什么管理人员把它作为考核指标就会失效，若程序猿把它当作反馈手段才能生效。程序猿可以通过这些反馈来学习和改进，从而拉升项目质量，<strong>这才是一个持续改进的过程</strong>。如上图例子我们就可以学习到：</p>
+<ul>
+<li><p>黄色钻石行原来没有被测试覆盖到</p>
+</li>
+<li><p>既然没有被覆盖到的代码是否是冗余呢</p>
+</li>
+<li><p>如非冗余，那么我们就可知道不是所有覆盖率都可到100%(这里是双锁)</p>
+</li>
+<li><p>有了单测建立过滤网，我们可以安全地进行重构</p>
+</li>
+<li><p>我们更可以尝试修改它，研究单测结果仍通过的原因是什么</p>
+</li>
+</ul>
+<h2 id="质量完成与质量达成"><a href="#质量完成与质量达成" class="headerlink" title="质量完成与质量达成"></a>质量完成与质量达成</h2><p>​		当我们看完覆盖率质量指标为何失效以及该怎么使用之后，我们补充下在上篇《<a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzUxMDQwNTYwMA==&mid=2247483815&idx=1&sn=ebc9deb628b8568a308764e8b4809777&chksm=f9023f28ce75b63e9b07e7cbeaa93cf4bbc0c09df6566777deeb18310f92060a8242a6106db7&scene=21#wechat_redirect">为你的Android实现测试覆盖率</a>》里提到的那个管理提覆盖率要求的可怕案例，现在该轮到更可怕的场景出场囖：</p>
+<ul>
+<li><p><strong>管理人员不知道覆盖率是个啥却提出要求，我们项目要达到70%以上代码覆盖率！</strong></p>
+</li>
+<li><p><strong>更可怕的是，团队最后竟然神奇地完成目标！</strong></p>
+</li>
+<li><p><strong>更更可怕的是，管理人员转身就对外报告，我们出色地满足标准，还有量化数据支撑，极大地拉升和保证项目质量！</strong></p>
+</li>
+</ul>
+<p>​		最后结果如何可想而知，质量问题当然还是如约而至。既然IT技术也不只是事情而已，若我们仅盯着事情表面，而不关注人本身，这种问题就层出不穷。更重要的是，我们会总感觉到某些员工的不对劲！</p>
+<ul>
+<li><p>他们为啥总有想法，不听命令</p>
+</li>
+<li><p>他们为啥总提出反对</p>
+</li>
+<li><p>他们为啥总亲力亲为不能同时处理好多件任务</p>
+</li>
+<li><p>他们为啥总承担过多责任，做事超出边界</p>
+</li>
+<li><p>他们为啥好像经常犯错</p>
+</li>
+</ul>
+<p>​		相比之下另外的员工就好得太多！他们能顺利地完成目标，报告里的他们像超人般同时负责几十个任务，更重要的是他们从来不犯错且善于发现别人的问题，这真是太棒了！</p>
+<p>​		可是不知道为什么，团队里效率越来越低，质量问题频出，需要规模越来越大，却不提建议不积极，不对劲的员工慢慢都不在了。</p>
+<p>​		单元测试也好，覆盖率也好，仅仅是这些状况的一种展现。这些状况一旦发生，劣币驱逐良币，就是个难以自察且不可逆转的过程，只能祝君武运昌隆了～</p>
+<p>​		<strong>关注事表面，仅是实现完成</strong></p>
+<p>​		<strong>关注人本身，才能实现达成</strong></p>
+<h2 id="从单测中帮助人持续学习"><a href="#从单测中帮助人持续学习" class="headerlink" title="从单测中帮助人持续学习"></a>从单测中帮助人持续学习</h2><p>​		上述这么多，回到我们的单元测试本身上。既然知道它应该为人的持续改进而被使用，那我们就可遵循以下原则来帮助人持续学习：</p>
+<ul>
+<li><p>以终为始：先知道正确验证结果长怎样，并以此为测试目标</p>
+</li>
+<li><p>确认边界：知道结果的边界在哪里，如&gt;&lt;&#x3D;+-！这种符号边界</p>
+</li>
+<li><p>代码变异：通过变异测试修改代码，将变异杀死，体现测试质量</p>
+</li>
+<li><p>频繁验证：每次变动&#x2F;每日去重新验证，尽快发现问题</p>
+</li>
+</ul>
+<p>（不要问我为什么这节这么短，想偷懒而已，以后补充）(坏笑…)</p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://vaycent.com/posts/61695/" title="为什么你的单元测试IT管理总是失效" target="_blank" rel="external">https://vaycent.com/posts/61695/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20210207002337.png" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20210207002337.png" target="_blank"><span class="text-dark">🤖Vaycent孙维</span><small class="ml-1x">AI与IT的咨询顾问</small></a></h3>
+        <div>专注为企业以及个人提供数字化、敏捷DevOps、IT技术研发、需求分析的咨询服务</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/posts/47582/" title="选择一名教练的指引-大规模敏捷LeSS"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/posts/28022/" title="为你的Android实现测试覆盖率"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn " data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">    <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,wechat,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/vaycent" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://xueqiu.com/vaycent" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://www.behance.net/vaycentsun" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        &copy; 2026 🤖Vaycent孙维
+        
+        <div class="publishby">
+		<!-- <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备20008800号</a> -->
+
+        <!--
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        -->
+        
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+
+
+
+
+   
+
+
+
+
+
+    <script defer>
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?77790ea31b04cf9ba059d113a90e3448";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+</body>
+</html>

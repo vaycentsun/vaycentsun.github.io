@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>某大型金融科技组织敏捷DevOps转型案例简介 | vaycent.com</title>
+  <meta name="description" content="前言​		本篇文章基于某金融科技企业的敏捷组织转型案例，介绍了其在研发效能提升方面的建设路径。通过外部咨询和内部关键角色相结合，探索出具备自身特色的敏捷组织转型旅程。优普丰很荣幸成为该企业深度合作伙伴之一，在整个转型过程中给予支持与陪伴。 ​		在这次转型中，我们始终坚信：任何成功的变革都离不开对人才培养和能力提升的重视。因此，在帮助团队减负改进、辅导团队实践技能水平以及培养ITBP促进业技融合等">
+<meta property="og:type" content="article">
+<meta property="og:title" content="某大型金融科技组织敏捷DevOps转型案例简介">
+<meta property="og:url" content="https://vaycent.com/posts/26240/index.html">
+<meta property="og:site_name" content="🤖Vaycent孙维">
+<meta property="og:description" content="前言​		本篇文章基于某金融科技企业的敏捷组织转型案例，介绍了其在研发效能提升方面的建设路径。通过外部咨询和内部关键角色相结合，探索出具备自身特色的敏捷组织转型旅程。优普丰很荣幸成为该企业深度合作伙伴之一，在整个转型过程中给予支持与陪伴。 ​		在这次转型中，我们始终坚信：任何成功的变革都离不开对人才培养和能力提升的重视。因此，在帮助团队减负改进、辅导团队实践技能水平以及培养ITBP促进业技融合等">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/202305111630598.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/202305111630529.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/202305111630723.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/202305111631092.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/202305111631083.png">
+<meta property="article:published_time" content="2023-03-28T00:00:00.000Z">
+<meta property="article:modified_time" content="2026-04-02T09:15:52.584Z">
+<meta property="article:author" content="🤖Vaycent孙维">
+<meta property="article:tag" content="BizDevOps">
+<meta property="article:tag" content="敏捷">
+<meta property="article:tag" content="数字化">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/202305111630598.png">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://vaycent.com/posts/26240/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="🤖Vaycent孙维" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20210207002337.png" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">🤖Vaycent孙维</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">AI与IT的咨询顾问</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Guangzhou, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+            <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+            <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+            <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+            <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+            <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">友链</span>
+          </a>          
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+            <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于我</span>
+          </a>          
+        </li>
+        
+ 
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/vaycent" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://xueqiu.com/vaycent" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://www.behance.net/vaycentsun" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+  
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>我很懒，总是不更新内容</p><p>可通过点击头像加我微信好友哦～</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%95%E8%B5%84/">投资</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A0%94%E5%8F%91%E6%8A%80%E6%9C%AF%E5%AE%9E%E8%B7%B5/">研发技术实践</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a><span class="category-list-count">7</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/BizDevOps/" style="font-size: 13.86px;">BizDevOps</a> <a href="/tags/IT%E7%A0%94%E5%8F%91%E6%8A%80%E6%9C%AF/" style="font-size: 13.43px;">IT研发技术</a> <a href="/tags/Playful%E5%A5%BD%E7%8E%A9/" style="font-size: 13.29px;">Playful好玩</a> <a href="/tags/%E4%B9%90%E9%AB%98%E8%AE%A4%E7%9C%9F%E7%8E%A9/" style="font-size: 13px;">乐高认真玩</a> <a href="/tags/%E5%BC%80%E6%BA%90/" style="font-size: 13.29px;">开源</a> <a href="/tags/%E6%8A%95%E8%B5%84/" style="font-size: 14px;">投资</a> <a href="/tags/%E6%95%8F%E6%8D%B7/" style="font-size: 13.71px;">敏捷</a> <a href="/tags/%E6%95%B0%E5%AD%97%E5%8C%96/" style="font-size: 13.57px;">数字化</a> <a href="/tags/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/" style="font-size: 13.14px;">移动开发</a> <a href="/tags/%E9%A2%86%E5%AF%BC%E5%8A%9B/" style="font-size: 13px;">领导力</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/">2026</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016</a><span class="archive-list-count">17</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/posts/0/" class="title">(no title)</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2026-05-20T06:52:15.179Z" itemprop="datePublished">2026-05-20</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/26240/" class="title">某大型金融科技组织敏捷DevOps转型案例简介</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-03-28T00:00:00.000Z" itemprop="datePublished">2023-03-28</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/10056/" class="title">高效团队-Google亚里士多德计划</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-01-31T00:00:00.000Z" itemprop="datePublished">2023-01-31</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/51086/" class="title">unFIX - 破幻求实的业务敏捷组织结构变革模型</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-09-18T00:00:00.000Z" itemprop="datePublished">2022-09-18</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/2ca8939/" class="title">unFIX模型-Forum(论坛)</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-04-13T00:00:00.000Z" itemprop="datePublished">2022-04-13</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+  <aside class="sidebar sidebar-toc collapse   in  " id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A7%91%E6%8A%80%E4%B8%AD%E5%BF%83%E7%89%B5%E5%A4%B4%EF%BC%8C%E4%BF%83%E8%BF%9B%E4%BC%81%E4%B8%9A%E4%B8%9A%E6%8A%80%E8%9E%8D%E5%90%88"><span class="toc-number">2.</span> <span class="toc-text">科技中心牵头，促进企业业技融合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B2%A1%E6%9C%89%E6%97%B6%E9%97%B4%E5%81%9C%E4%B8%8B%E6%9D%A5%E5%8F%82%E4%B8%8E%E6%94%B9%E8%BF%9B%E4%B8%8E%E6%8F%90%E5%8D%87"><span class="toc-number">3.</span> <span class="toc-text">没有时间停下来参与改进与提升</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%8F%E8%B4%9F%E8%BD%BB%E8%A3%85%E5%85%88%E8%A1%8C%EF%BC%8C%E6%95%88%E8%83%BD%E6%8F%90%E5%8D%87%E5%88%86%E6%AD%A5%E8%B5%B0"><span class="toc-number">4.</span> <span class="toc-text">减负轻装先行，效能提升分步走</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%8B%E8%83%BD%E7%BB%84%E7%BB%87%EF%BC%8C%E5%BB%BA%E7%AB%8B%E6%A0%87%E6%9D%86%E5%9B%A2%E9%98%9F"><span class="toc-number">5.</span> <span class="toc-text">赋能组织，建立标杆团队</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86%E6%8C%91%E6%88%98%EF%BC%9A%E4%B8%9A%E5%8A%A1%E4%B8%8E%E7%A7%91%E6%8A%80%E7%9F%9B%E7%9B%BE%E5%AF%B9%E7%AB%8B"><span class="toc-number">6.</span> <span class="toc-text">研发管理挑战：业务与科技矛盾对立</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E4%B8%9A%E5%8A%A1ITBP%E6%9C%BA%E5%88%B6%E4%BF%83%E8%BF%9B%E4%B8%9A%E6%8A%80%E8%9E%8D%E5%90%88"><span class="toc-number">7.</span> <span class="toc-text">信息技术业务ITBP机制促进业技融合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E%EF%BC%9A%E4%BA%BA%E6%89%8D%E7%9A%84%E5%85%B3%E9%94%AE%E6%80%A7"><span class="toc-number">8.</span> <span class="toc-text">写在最后：人才的关键性</span></a></li></ol>
+    </nav>
+  </div>
+</aside>
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-20230328某大型金融科技企业敏捷DevOps转型案例简介" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      某大型金融科技组织敏捷DevOps转型案例简介
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/posts/26240/" class="article-date">
+	  <time datetime="2023-03-28T00:00:00.000Z" itemprop="datePublished">2023-03-28</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E7%BB%84%E7%BB%87%E7%A0%94%E5%8F%91%E7%AE%A1%E7%90%86/">组织研发管理</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/BizDevOps/" rel="tag">BizDevOps</a>, <a class="article-tag-link-link" href="/tags/%E6%95%8F%E6%8D%B7/" rel="tag">敏捷</a>, <a class="article-tag-link-link" href="/tags/%E6%95%B0%E5%AD%97%E5%8C%96/" rel="tag">数字化</a>
+  </span>
+
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/26240/#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>​		本篇文章基于某金融科技企业的敏捷组织转型案例，介绍了其在研发效能提升方面的建设路径。通过外部咨询和内部关键角色相结合，探索出具备自身特色的敏捷组织转型旅程。优普丰很荣幸成为该企业深度合作伙伴之一，在整个转型过程中给予支持与陪伴。</p>
+<p>​		在这次转型中，我们始终坚信：任何成功的变革都离不开对人才培养和能力提升的重视。因此，在帮助团队减负改进、辅导团队实践技能水平以及培养ITBP促进业技融合等方面，我们注重对员工个体素质和职业生涯规划等方面进行支持和指导，并将其紧密结合到公司战略目标上。</p>
+<h2 id="科技中心牵头，促进企业业技融合"><a href="#科技中心牵头，促进企业业技融合" class="headerlink" title="科技中心牵头，促进企业业技融合"></a>科技中心牵头，促进企业业技融合</h2><p>​		随着金融科技行业在过去十年中的高速发展，传统业务市场逐渐饱和导致存量增长空间受限。同时，组织规模的扩张也带来了巨大的管理复杂性和不经济的效应。因此，如何提升组织效能、实现敏捷转型成为当前金融科技企业研究课题。</p>
+<p>​		作为外部敏捷咨询顾问之一，我有幸参与国内某知名头部金融科技企业的敏捷转型，并陪伴进行敏捷转型及探索。我们帮助该企业建立了以客户为中心、由科技中心牵头赋能业务的敏捷组织体系，并通过效能部门快速响应开启了全链路DevOps平台工具建设规划，旨在拉通对齐科技中心全流程并提升数字化水平。</p>
+<p>​		首席数字官CDO在该公司组织敏捷转型初期表明：“建立以客户为中心的业技融合敏捷组织，并由科技中心牵头，让科技赋能业务”的愿景。这一目标激发了整个团队迅速响应并开始推进有效体系建设及团队培养等方面工作，在尝试将商业与科技团队相互融合上取得显著成果。</p>
+<h2 id="没有时间停下来参与改进与提升"><a href="#没有时间停下来参与改进与提升" class="headerlink" title="没有时间停下来参与改进与提升"></a>没有时间停下来参与改进与提升</h2><p>​		尽管组织在敏捷转型之初有着明确的上层目标，并且初步建立了组织效能体系规范与DevOps平台，但我们很快就面临了实际问题。团队导入进度远远落后于预期，多个开发团队的成员也反馈：“项目进度紧张实在太忙，还要频繁应对需求变更以及生产故障救火，我们确实没时间停下来进行改进与提升。”</p>
+<p>​		这种情况并不罕见，因为在企业转型过程中经常会遭遇到各种挑战和阻力。大家还没有认识到在组织效能提升、改进导入的过程中，业务连续性、监管安全保障、新需求的研发交付这些方方面面同样是不能落后的。</p>
+<p>​		为解决敏捷DevOps导入过程缓慢甚至受阻问题，我们走访调研了不同业务条线团队的关键角色，发现大多数团队都面临以下几个核心难题：</p>
+<ol>
+<li>组织级效能体系与团队级实践规范之间缺乏灵活性的裁剪补充。</li>
+<li>各团队对敏捷DevOps实践认识未统一，难以开展效能工具平台的内部推广。</li>
+<li>团队之间存在外部依赖严重，导致需求价值交付牵涉多个团队对齐以及工件等待。</li>
+<li>需求分析至文档编写过程容易出现细节遗漏、频繁变更和文档与代码不匹配等问题。</li>
+<li>过程管理中手工操作比例较高，缺乏自动化技术、效率质量度量和数据反馈闭环机制。</li>
+</ol>
+<h2 id="减负轻装先行，效能提升分步走"><a href="#减负轻装先行，效能提升分步走" class="headerlink" title="减负轻装先行，效能提升分步走"></a>减负轻装先行，效能提升分步走</h2><p>​		为了促进团队的敏捷DevOps导入，我们制定了一个“三步走”的转型策略。采取轻量转变导入、循序渐进提升的思路，通过轻量级转变和循序渐进提升的方式来解决团队运作中最紧迫的问题，从解决团队运作阻碍的实际问题出发，聚焦第一阶段的内容辅导，更好地帮助团队的效能提升能够“轻装上阵”。以帮助团队更好地应对挑战并提高效率。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/202305111630598.png" alt="image-20230511163019104"></p>
+<p>​		在第一阶段（6个月）中，我们将建立一个跨职能的标杆团队，并横向打通全链路过程节点标准，纵向贯通团队价值流动以减少依赖。同时，在团队内初步建成实践规范并导入运行的基础上，通过共同工作的方式辅导团队解决实际日常工作当中的需求分析、开发测试、敏捷协作等问题。</p>
+<p>​		为了确保这些实践得到落地和推广，我们还将把固化后的团队实践导入DevOps平台，并进行一体化推进。同时，我们也会同步提升自动化水平以及建立数据度量基线来帮助更好地监控和评估整个流程效果。</p>
+<p>​		在第二阶段（5-8个月）中，我们将全面推广敏捷体系及DevOps平台实践，并完成敏稳双态的敏捷组织形态建立。为此，我们将制定并完成整个中心关键角色的人才培养计划，并进一步完善不同类型业务线条研发团队的实践指南裁剪。</p>
+<p>​		我们还会通过工具平台来实现全链路与原有工作系统的打通，并采用信息化、线上化等手段来有效沉淀效能数据要素。这些措施旨在帮助我们更好地监控和评估整个流程效果，以便于优化和改进。</p>
+<p>​		通过这些举措和策略，在第二阶段结束时，我们将成功建立一个科技中心内部完备的敏稳双态的敏捷组织形态，并实现了全链路过程节点标准化、自动化水平提升、数据度量基线构建等目标。</p>
+<p>​		在第三阶段（5-8个月）中，我们将促进企业价值流的业技融合，并把DevOps效能平台的应用推广扩展至业务侧管理。为此，我们将按照不同的业务条线建立多领域的作战单元，并完善企业数字治理体系和数字基础设施联通。</p>
+<p>​		我们还通过实现数据资产化、资产业务化等闭环来让组织效能的数据价值要素得到有效释放。这些措施旨在帮助我们更好地利用数据资源和提升整个组织效能，从而实现更高水平的数字转型和创新。</p>
+<p>​		在第三阶段结束时，我们将完成了一个完整、高效且可持续发展的企业数字治理体系，并成功推广了DevOps效能平台应用于各个部门和领域。</p>
+<h2 id="赋能组织，建立标杆团队"><a href="#赋能组织，建立标杆团队" class="headerlink" title="赋能组织，建立标杆团队"></a>赋能组织，建立标杆团队</h2><p><img src="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/202305111630529.png"></p>
+<p>​		基于优普丰过去在金融科技行业的经验和独创的ALPHA一体化体系套件，我们将结合当前组织现状及特点，快速地协助效能部门导入效能体系并规范基线。该系统涵盖了科技中心的价值管理、过程管理、质量管理、配置管理以及人才培养计划和组织文化建设计划等方面。</p>
+<p>​		通过这个一体化体系套件，我们将帮助效能部门赋能整个组织横向打通各节点管理标准，并提供更加高效和可持续发展的解决方案。同时，我们也会根据实际情况调整和优化这个一体化体系套件以适应不同领域和行业的需求。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/202305111630723.png" alt="image-20230511163050119"></p>
+<p>​		在团队层面，我们将从建立第一批跨职能的标杆团队试点开始。为此，我们会针对该团队的业务特征以及技术栈特性，设计适合其使用的敏捷协作机制和工程实践指引。</p>
+<p>​		接着，通过培训、工作坊等方式来拉通大家共识，并由外部敏捷教练带领他们共同工作并指导他们如何使用内部DevOps平台及数据度量。同时，还会根据内部研发关键角色的情况开展有针对性的培养训练。</p>
+<p>​		整个历程时长约为6个月，在这段时间里，我们帮助该团队更好地理解和应用敏捷协作方法论和DevOps技术，并提高效率、减少瓶颈、优化流程等方面取得显著进展。最终目标是打造出一个高效且可持续发展的标杆团队，并将其成功复制到其他团队中去。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/202305111631092.png" alt="image-20230511163105546"></p>
+<p>​		除了给团队导入体系规范、敏捷协作机制和DevOps工具平台，我们也认为团队的工程实践是不容忽视的。事实上，它才是决定团队效能和质量内建的关键。</p>
+<p>​		因此，在这个过程中，我们将提供分层分类的工程实践方法指导，并协助团队建立自身内部的团队规则。最终，这些规则也会被固化到DevOps平台的团队协作空间实践上，并让整个流程变得更加自驱动地持续改进。</p>
+<h2 id="研发管理挑战：业务与科技矛盾对立"><a href="#研发管理挑战：业务与科技矛盾对立" class="headerlink" title="研发管理挑战：业务与科技矛盾对立"></a>研发管理挑战：业务与科技矛盾对立</h2><p>​		我们的研发团队在科技侧已经完备了对应的效能体系与管理机制。然而，我们仍然面临一个让所有人都困扰的巨大挑战：需要处理来自多个业务条线来源的需求，这些需求互相竞争着研发资源和优先级。此外，每个业务方都声称“这是一项紧急需求，并且领导非常关注”，使得任务分配变得更加复杂。</p>
+<p>​		某个研发经理忍不住与我吐槽：“这些需求说来就来说变就变，讲不清楚需求细节信息，上线日期却是被安排上了。我们作为下游交付方已经加班加点，仍然被责怪交付得慢，要是向组织争取更多资源吧，也非常困难。”</p>
+<p>​		我们后续与业务部门就现状进行沟通，发现他们也委屈，受限于各自的业务压力以及自身的研发技术能力有限，对需求实现的可行性、关联系统、依赖方、大致工作量心里没底，只能一直催促着研发团队给出更确切的信息与计划。</p>
+<p>​		看似矛盾对立的双方，实则背后都在为其职能在进行着努力，同样期盼着组织效能够得到提升，求同存异地共同发展是业技融合的关键点。</p>
+<h2 id="信息技术业务ITBP机制促进业技融合"><a href="#信息技术业务ITBP机制促进业技融合" class="headerlink" title="信息技术业务ITBP机制促进业技融合"></a>信息技术业务ITBP机制促进业技融合</h2><p>​		为了解决当前业务与科技的困境，我们计划从科技中心挑选一批IT人才作为业务的合作伙伴（简称ITBP）。这些人员属于科技中心，需要与业务部门进行紧密高效的协作。他们将帮助业务需求识别关联系统&#x2F;服务，并进行初略估算排期。</p>
+<p>​		同时，作为研发团队的需求收口处理团队，他们将负责优先级排序和交付内容管理。此外，在研发过程中遇到阻碍或需要澄清细节时，ITBP也能及时向业务反馈并争取资源和支持。通过引入ITBP这个角色来加强科技与业务之间的沟通和协调，并提高整体工作效率。</p>
+<p>​		与传统的IT人员相比，ITBP成员的综合要求更高，其不仅需要有扎实的研发技术背景，擅长协调团队交付的能力，更加要关注业务价值的流动，利用自身研发技术优势建设团队基础设施以及沉淀技术组件，以持续支持业务的快速响应与发展。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/202305111631083.png" alt="image-20230511163122383"></p>
+<p>​		因此为了帮助ITBP种子成员获得相应的技能和能力，我们设立了ITBP培训和训练计划。该计划包括四个环节：</p>
+<ol>
+<li>培训：在培训阶段，我们将提供一系列课程来教授必要的知识和技能。这些课程包括但不限于业务理解、项目管理、软件开发流程等。</li>
+<li>作业：通过分配实际任务或者模拟任务，帮助学员更好地理解所学内容，并且逐步独立完成相关工作。</li>
+<li>实践：在实践阶段，学员将有机会参与到真正的项目中，并且负责特定领域或者功能点的开发或支持工作。这样可以加深对业务需求的认知以及各类技术方案落地情况。</li>
+<li>考核：最后，在考核环节中，我们将对学员进行综合评估并给予反馈。根据评估结果向他们提供进一步改善建议并制定下一步职业规划。</li>
+</ol>
+<p>​		同时，在组织层面上建立ITBP与效率部门&#x2F;PMO之间的反馈闭环机制也是非常重要的。这样可以确保对于业务技术融合效益提升赋能与追踪有效进行, 并且及时调整优化培养计划以满足公司战略目标需要。</p>
+<h2 id="写在最后：人才的关键性"><a href="#写在最后：人才的关键性" class="headerlink" title="写在最后：人才的关键性"></a>写在最后：人才的关键性</h2><p>​		在本次组织敏捷转型案例中，我们发现无论是帮助团队减负改进还是培养ITBP促进业技融合，都离不开对人才的培养和能力关注。一个组织就像一个复杂系统，我们不能强制要求它表现出我们期望的结果。但通过持续地对人才进行培养，可以让组织逐渐成长为我们所期望的那样。</p>
+<p>​		我们始终相信高效能组织有两条效能基线：一条是机制规范红线，在组织层面上确保防止触及能力水平下限；另一条则是人才自主发挥能力的绿线，在激发员工创造性、提高个体素质方面达到最大化。只有这两者共同围蔽的区间才代表着真正意义上的组织能力水平。</p>
+<p>​		因此，在实践中，除了重视机制建设外，更应该注重对员工个体素质和职业生涯规划等方面进行支持和指导，并且与公司战略目标紧密结合起来。这样可以不断提升员工自身价值和企业竞争优势，并且推动整个组织向着更加高效、灵活、可持续地方向前行。</p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://vaycent.com/posts/26240/" title="某大型金融科技组织敏捷DevOps转型案例简介" target="_blank" rel="external">https://vaycent.com/posts/26240/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20210207002337.png" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://cdn.jsdelivr.net/gh/Vaycent/MyImageHosting01@main/img/20210207002337.png" target="_blank"><span class="text-dark">🤖Vaycent孙维</span><small class="ml-1x">AI与IT的咨询顾问</small></a></h3>
+        <div>专注为企业以及个人提供数字化、敏捷DevOps、IT技术研发、需求分析的咨询服务</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/posts/0/" title="(no title)"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/posts/10056/" title="高效团队-Google亚里士多德计划"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn " data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">    <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,wechat,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/vaycent" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://xueqiu.com/vaycent" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://www.behance.net/vaycentsun" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        &copy; 2026 🤖Vaycent孙维
+        
+        <div class="publishby">
+		<!-- <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备20008800号</a> -->
+
+        <!--
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        -->
+        
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+
+
+
+
+   
+
+
+
+
+
+    <script defer>
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?77790ea31b04cf9ba059d113a90e3448";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+</body>
+</html>
