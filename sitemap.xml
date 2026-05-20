@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://vaycent.com/posts/0/</loc>
+    <loc>https://vaycent.com/posts/39073/</loc>
     
     <lastmod>2026-05-20</lastmod>
     
@@ -449,6 +449,13 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://vaycent.com/tags/AI%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -474,6 +481,13 @@
   
   <url>
     <loc>https://vaycent.com/categories/%E6%8A%95%E8%B5%84/</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://vaycent.com/categories/AI%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</loc>
     <lastmod>2026-05-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
